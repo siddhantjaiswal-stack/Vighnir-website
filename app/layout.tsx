@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Libre_Caslon_Display, Figtree, Spline_Sans_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE, BRANDS, FAQS } from "@/lib/site";
 import "./globals.css";
 
@@ -190,6 +192,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
