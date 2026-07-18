@@ -602,6 +602,17 @@ export default function Experience() {
             },
             { signal, passive: true }
           );
+          const hideCard = (card: HTMLElement) => {
+            if (active === card) active = null;
+            gsap.killTweensOf(card);
+            gsap.to(card, {
+              autoAlpha: 0,
+              scale: 0.9,
+              duration: 0.3,
+              ease: "power2.in",
+              overwrite: "auto",
+            });
+          };
           const followCard = () => {
             if (!active) return;
             const w = active.offsetWidth;
@@ -616,6 +627,18 @@ export default function Experience() {
           };
           gsap.ticker.add(followCard);
           tickers.push(followCard);
+          /* browsers don't fire pointerleave when content scrolls out from
+             under a stationary cursor — re-check hover target on scroll */
+          window.addEventListener(
+            "scroll",
+            () => {
+              if (!active) return;
+              const under = document.elementFromPoint(px, py);
+              const row = under ? (under.closest(".row") as HTMLElement | null) : null;
+              if (!row || row.dataset.preview !== active.dataset.brand) hideCard(active);
+            },
+            { signal, passive: true }
+          );
           qa(".row").forEach((row) => {
             const id = row.dataset.preview || "";
             row.addEventListener(
@@ -623,6 +646,7 @@ export default function Experience() {
               (e) => {
                 const card = cards.get(id);
                 if (!card) return;
+                if (active && active !== card) hideCard(active);
                 active = card;
                 cx = e.clientX + 36;
                 cy = e.clientY - card.offsetHeight / 2;
@@ -630,7 +654,13 @@ export default function Experience() {
                 py = e.clientY;
                 gsap.killTweensOf(card);
                 gsap.set(card, { x: cx, y: cy });
-                gsap.to(card, { autoAlpha: 1, scale: 1, duration: 0.45, ease: "power3.out" });
+                gsap.to(card, {
+                  autoAlpha: 1,
+                  scale: 1,
+                  duration: 0.45,
+                  ease: "power3.out",
+                  overwrite: "auto",
+                });
               },
               { signal }
             );
@@ -638,9 +668,7 @@ export default function Experience() {
               "pointerleave",
               () => {
                 const card = cards.get(id);
-                if (!card) return;
-                if (active === card) active = null;
-                gsap.to(card, { autoAlpha: 0, scale: 0.9, duration: 0.35, ease: "power2.in" });
+                if (card) hideCard(card);
               },
               { signal }
             );
