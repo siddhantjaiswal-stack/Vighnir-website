@@ -1,4 +1,5 @@
 import Experience from "@/components/Experience";
+import SiteFooter from "@/components/SiteFooter";
 import { BRANDS, FAQS, SITE } from "@/lib/site";
 
 const Arrow = () => (
@@ -200,13 +201,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <div className="wrap foot mono">
-          <span>© MMXXVI Vighnir</span>
-          <span>eko · The Club · Aquarius</span>
-          <address style={{ fontStyle: "normal" }}>Noida · India</address>
-        </div>
-      </footer>
+      <SiteFooter />
 
       <Experience />
     </>

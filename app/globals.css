@@ -517,6 +517,10 @@ html.js .contact .mono,html.js .contact h2,html.js .contact .mail{opacity:0}
 /* ───────────────────────────── footer ── */
 footer{border-top:1px solid var(--hair);padding:28px 0 40px;position:relative;z-index:1}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--faint)}
+/* legal links — same treatment as .nav-links, in the footer flex row */
+.foot-legal{display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,26px)}
+.foot-legal a{color:var(--faint);transition:color .25s}
+.foot-legal a:hover{color:var(--text)}
 
 /* ───────────────────────────── responsive ── */
 @media (max-width:940px){
