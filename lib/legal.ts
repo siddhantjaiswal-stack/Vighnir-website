@@ -18,11 +18,11 @@
  *     role with 24-hour acknowledgement and 15-day resolution duties. If
  *     someone else is to hold it, change this one line and both pages follow.
  *
- *  2. `entity` is the trading name "Vighnir" because nothing on this site or in
- *     the app repo names a registered company. Google Play requires the entity
- *     named in the store listing to appear in the privacy policy — so either
- *     the Play developer account is registered as "Vighnir", or the registered
- *     name (and CIN, and registered office) goes here and in `postalAddress`.
+ *  2. RESOLVED 2026-08-03: the registered entity is "Vighnir (OPC) Private
+ *     Limited" — confirmed from the Apple Developer organisation account
+ *     (team JQHHG3FT8G). Still open from the original gap: the CIN and the
+ *     registered office street address. Add both here when known; the Google
+ *     Play developer account must be registered under this same name.
  *
  *  3. `postalAddress` has no street. A grievance mechanism that a user can only
  *     reach by email is thin; add the correspondence address.
@@ -32,8 +32,8 @@
  *     one edit updates all three pages.
  */
 export const LEGAL = {
-  /** Trading name of the operator. See gap 2 above. */
-  entity: "Vighnir",
+  /** Registered name of the operator. See gap 2 above. */
+  entity: "Vighnir (OPC) Private Limited",
   product: "The Club",
 
   effective: "3 August 2026",
@@ -48,8 +48,8 @@ export const LEGAL = {
   /** See gap 1. Named because Rule 3(2)(a) requires a name, not a role title. */
   grievanceOfficerName: "Siddhant Jaiswal",
 
-  /** See gap 3. */
-  postalAddress: "Vighnir, Noida, Uttar Pradesh, India",
+  /** See gap 3 — still missing the registered-office street address. */
+  postalAddress: "Vighnir (OPC) Private Limited, Noida, Uttar Pradesh, India",
 } as const;
 
 /** Formatted for `<time dateTime>` and for prose, from one source. */
