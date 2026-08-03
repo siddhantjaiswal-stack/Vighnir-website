@@ -41,7 +41,7 @@ export default function AccountDeletion() {
           <h1>Delete your account</h1>
           <p className="lede">
             How to delete your <strong>The Club</strong> account and the data
-            attached to it — operated by Vighnir, Noida, India.
+            attached to it — operated by Vighnir (OPC) Private Limited, Bareilly, India.
           </p>
           <div className="legal-meta mono">
             <span>
@@ -331,8 +331,7 @@ export default function AccountDeletion() {
                   <b>Post:</b> {LEGAL.postalAddress}
                 </span>
                 <span>
-                  <b>App:</b> The Club · <b>Operator:</b> {LEGAL.entity}, Noida,
-                  Uttar Pradesh, India
+                  <b>App:</b> The Club · <b>Operator:</b> {LEGAL.entity} (CIN {LEGAL.cin}), Bareilly, Uttar Pradesh, India
                 </span>
               </div>
               <p>

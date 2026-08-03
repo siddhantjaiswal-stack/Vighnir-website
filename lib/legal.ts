@@ -20,18 +20,20 @@
  *
  *  2. RESOLVED 2026-08-03: the registered entity is "Vighnir (OPC) Private
  *     Limited" — confirmed from the Apple Developer organisation account
- *     (team JQHHG3FT8G). Still open from the original gap: the CIN and the
- *     registered office street address. Add both here when known; the Google
- *     Play developer account must be registered under this same name.
+ *     (team JQHHG3FT8G). RESOLVED FULLY 2026-08-03: CIN and registered
+ *     office added from the incorporation papers. The Google Play developer
+ *     account must be registered under this same name.
  *
- *  3. `postalAddress` has no street. A grievance mechanism that a user can only
- *     reach by email is thin; add the correspondence address.
+ *  3. RESOLVED 2026-08-03: registered office is 199-197 Civil Lines,
+ *     Bareilly - 243001, UP (certificate of incorporation). Gap closed.
  *
  *  4. The pages use a personal mailbox. Create `privacy@vighnir.com` and
  *     `grievance@vighnir.com`, point them at a human, then change them here —
  *     one edit updates all three pages.
  */
 export const LEGAL = {
+  /** Corporate Identification Number, from the MCA master data. */
+  cin: "U62099UP2026OPC241657",
   /** Registered name of the operator. See gap 2 above. */
   entity: "Vighnir (OPC) Private Limited",
   product: "The Club",
@@ -48,8 +50,8 @@ export const LEGAL = {
   /** See gap 1. Named because Rule 3(2)(a) requires a name, not a role title. */
   grievanceOfficerName: "Siddhant Jaiswal",
 
-  /** See gap 3 — still missing the registered-office street address. */
-  postalAddress: "Vighnir (OPC) Private Limited, Noida, Uttar Pradesh, India",
+  /** The registered office, from the certificate of incorporation (docs dropped 2026-08-03). */
+  postalAddress: "Vighnir (OPC) Private Limited, 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India",
 } as const;
 
 /** Formatted for `<time dateTime>` and for prose, from one source. */

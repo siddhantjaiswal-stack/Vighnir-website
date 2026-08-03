@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
               <p>
                 <strong>The Club</strong> is a social app for India, built and
                 operated by <strong>{LEGAL.entity}</strong>, a founder-led
-                business based in Noida, Uttar Pradesh, India. For the purposes
+                company with its registered office in Bareilly, Uttar Pradesh, India. For the purposes
                 of India’s Digital Personal Data Protection Act, 2023 (“the DPDP
                 Act”), {LEGAL.entity} is the <em>Data Fiduciary</em> for the
                 personal data described here, and you are the{" "}
@@ -940,7 +940,7 @@ export default function PrivacyPolicy() {
                   <b>Post:</b> {LEGAL.postalAddress}
                 </span>
                 <span>
-                  <b>Operator:</b> {LEGAL.entity}, Noida, Uttar Pradesh, India
+                  <b>Operator:</b> {LEGAL.entity} (CIN {LEGAL.cin}), Bareilly, Uttar Pradesh, India
                 </span>
               </div>
               <p>

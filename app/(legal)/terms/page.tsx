@@ -66,8 +66,9 @@ export default function TermsOfService() {
               <p>
                 These Terms of Service, together with the{" "}
                 <Link href="/privacy">Privacy Policy</Link>, are the agreement
-                between you and <strong>{LEGAL.entity}</strong> — a founder-led
-                business in Noida, Uttar Pradesh, India — for your use of{" "}
+                between you and <strong>{LEGAL.entity}</strong> (CIN {LEGAL.cin}) — a
+                founder-led company with its registered office at Civil Lines,
+                Bareilly, Uttar Pradesh, India — for your use of{" "}
                 <strong>The Club</strong>. In these terms “we”, “us” and “our”
                 mean {LEGAL.entity}; “you” means the person using The Club.
               </p>
@@ -433,8 +434,8 @@ export default function TermsOfService() {
               <p>
                 These terms are governed by the laws of India. Subject to your
                 right to use the grievance and appellate mechanisms described in{" "}
-                <a href="#grievance">§8</a>, the courts at Gautam Budh Nagar
-                (Noida), Uttar Pradesh, India will have jurisdiction over any
+                <a href="#grievance">§8</a>, the courts at Bareilly,
+                Uttar Pradesh, India will have jurisdiction over any
                 dispute arising out of them.
               </p>
             </section>
@@ -453,7 +454,7 @@ export default function TermsOfService() {
                   <b>Post:</b> {LEGAL.postalAddress}
                 </span>
                 <span>
-                  <b>Operator:</b> {LEGAL.entity}, Noida, Uttar Pradesh, India
+                  <b>Operator:</b> {LEGAL.entity} (CIN {LEGAL.cin}), Bareilly, Uttar Pradesh, India
                 </span>
               </div>
               <p>
