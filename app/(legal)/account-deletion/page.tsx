@@ -169,9 +169,11 @@ export default function AccountDeletion() {
                 <div>
                   <dt>180 days</dt>
                   <dd>
-                    The maximum life of the server logs described in{" "}
-                    <a href="#kept">§6</a>, which we are legally required to keep
-                    for that long.
+                    Not a deadline that applies to anyone yet. It is the life of
+                    the server-log archive described in <a href="#kept">§6</a>,
+                    which Indian law requires and which we have not built —
+                    today, deleting your account leaves no request records
+                    behind, because there are none.
                   </dd>
                 </div>
               </dl>
@@ -234,20 +236,28 @@ export default function AccountDeletion() {
             <section id="kept">
               <h2>6. What we keep, and for how long</h2>
               <p>
-                Two narrow exceptions, both because a law requires them. We are
-                listing them rather than quietly relying on them.
+                Narrow exceptions, listed rather than quietly relied on. The
+                first of them does not exist yet, and we say so instead of
+                letting you assume the worst.
               </p>
               <dl className="legal-dl">
                 <div>
-                  <dt>Server request logs — 180 days</dt>
+                  <dt>Server request logs — none today; 180 days once they exist</dt>
                   <dd>
-                    Records of requests made to our servers: IP address, user
-                    agent, timestamp, the path called and a request identifier.
+                    <strong>
+                      We keep no request logs at the moment, so a deletion today
+                      removes everything and leaves no trace of your requests.
+                    </strong>{" "}
                     CERT-In’s direction of 28 April 2022 requires providers to
-                    keep ICT system logs for a rolling 180 days within Indian
-                    jurisdiction. These logs are not searchable by name and are
-                    used only for security and to answer a lawful request. They
-                    are deleted when they are 180 days old.
+                    keep ICT system logs — IP address, user agent, timestamp, the
+                    path called and a request identifier — for a rolling 180 days
+                    within Indian jurisdiction, and we are setting that up in AWS
+                    Mumbai before public release (
+                    <Link href="/privacy#not-yet">Privacy §17</Link>). From then
+                    on, those records survive the deletion of your account and are
+                    erased when they are 180 days old. They are not searchable by
+                    name and are used only for security and to answer a lawful
+                    request.
                   </dd>
                 </div>
                 <div>
@@ -259,11 +269,25 @@ export default function AccountDeletion() {
                     we do not use it for anything else.
                   </dd>
                 </div>
+                <div>
+                  <dt>A signup that never finished</dt>
+                  <dd>
+                    One case where we keep something without meaning to. If you
+                    verified a phone number or email address and signup then
+                    stopped — most often because the 18+ check refused the date of
+                    birth you gave — the record created by that verification stays
+                    on our servers, and nothing removes it automatically today.
+                    There is no profile, no username and no usable account behind
+                    it, but the number or address is there. It is a gap we are
+                    closing before public release; until then, email us as in{" "}
+                    <a href="#request">§1</a> and a person deletes it.
+                  </dd>
+                </div>
               </dl>
               <p>
-                Nothing else is kept. We do not retain a shadow profile, we do
-                not keep your data “for analytics”, and we do not pass anything
-                to an advertiser — there are none.
+                Beyond those, nothing is kept. We do not retain a shadow profile,
+                we do not keep your data “for analytics”, and we do not pass
+                anything to an advertiser — there are none.
               </p>
             </section>
 

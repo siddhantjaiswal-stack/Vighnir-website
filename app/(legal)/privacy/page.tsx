@@ -157,9 +157,13 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Password</dt>
                   <dd>
-                    Only if you choose email-and-password sign-in. We store a
-                    salted, iterated cryptographic hash. We never store, and
-                    cannot read, your actual password.
+                    Signup asks you to set a password whether you started with a
+                    phone number or with an email address — with a phone number
+                    it is attached to the account the one-time password already
+                    created. So if you signed up either of those ways, we hold
+                    one. We store a salted, iterated cryptographic hash; we never
+                    store, and cannot read, your actual password. Sign in with
+                    Google and Sign in with Apple set no password at all.
                   </dd>
                 </div>
                 <div>
@@ -257,15 +261,19 @@ export default function PrivacyPolicy() {
                     force a code.
                   </dd>
                 </div>
-                <div>
-                  <dt>Server request logs</dt>
-                  <dd>
-                    IP address, user agent, timestamp, the path called and a
-                    request identifier. Kept for 180 days — see{" "}
-                    <a href="#retention">§10</a>.
-                  </dd>
-                </div>
               </dl>
+              <p>
+                <strong>
+                  We do not keep a server request log archive of our own today.
+                </strong>{" "}
+                Our API writes no request log, and there is no store of your IP
+                addresses or requests anywhere we control. Indian law will
+                require one before public release, and we have described it in
+                advance in <a href="#not-yet">§17</a> rather than writing it here
+                as if it already existed. Cloudflare, which runs the API, handles
+                the request itself as part of delivering it — see{" "}
+                <a href="#processors">§8</a>.
+              </p>
 
               <h3>What we do not ask for</h3>
               <p>
@@ -317,10 +325,13 @@ export default function PrivacyPolicy() {
               <p>
                 We process your personal data on the basis of the{" "}
                 <strong>consent</strong> you give when you create an account,
-                after being shown this notice. Some processing is also necessary
-                to comply with law — the server logs in{" "}
-                <a href="#retention">§10</a> are kept because a CERT-In direction
-                requires it, not because you agreed to it.
+                after being shown this notice. Some processing will also be
+                necessary to comply with law rather than because you agreed to
+                it: once the server-log archive described in{" "}
+                <a href="#not-yet">§17</a> exists, it will be kept because a
+                CERT-In direction requires it, and withdrawing consent will not
+                remove it. That archive is not built yet, so today consent is the
+                only basis on which we hold anything of yours.
               </p>
               <p>
                 <strong>You can withdraw your consent at any time</strong>, and
@@ -473,13 +484,6 @@ export default function PrivacyPolicy() {
                   <dd>Only if you choose Sign in with Apple. Same.</dd>
                 </div>
                 <div>
-                  <dt>Amazon Web Services</dt>
-                  <dd>
-                    Mumbai region (ap-south-1). Where the 180-day server log
-                    archive required by CERT-In is kept.
-                  </dd>
-                </div>
-                <div>
                   <dt>Vercel</dt>
                   <dd>
                     Hosts this website, vighnir.com. Not part of the app. See{" "}
@@ -487,6 +491,13 @@ export default function PrivacyPolicy() {
                   </dd>
                 </div>
               </dl>
+              <p>
+                <strong>That is the whole list.</strong> Amazon Web Services is
+                deliberately not on it: the India log archive in{" "}
+                <a href="#not-yet">§17</a> is not built, so AWS holds nothing of
+                yours today. It joins this list on the day that archive starts
+                receiving data, and this page changes in the same release.
+              </p>
               <p>
                 We require any third party we share personal data with —
                 including any parent, subsidiary or related company — to protect
@@ -531,7 +542,12 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                   <dt>Server logs</dt>
-                  <dd>India — AWS Mumbai (ap-south-1).</dd>
+                  <dd>
+                    There are none to store. When the archive in{" "}
+                    <a href="#not-yet">§17</a> is built it will be in India — AWS
+                    Mumbai (ap-south-1) — and this row will say so in the present
+                    tense.
+                  </dd>
                 </div>
               </dl>
               <p>
@@ -572,10 +588,14 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Server request logs</dt>
                   <dd>
-                    <strong>180 days, then deleted.</strong> CERT-In’s direction
+                    <strong>None are kept today</strong>, because none are
+                    written — see <a href="#collect">§3</a>. CERT-In’s direction
                     of 28 April 2022 requires providers to keep ICT system logs
-                    for a rolling 180 days within Indian jurisdiction. This is
-                    why some technical data about your requests survives the
+                    for a rolling 180 days within Indian jurisdiction, and we are
+                    building that archive before public release (
+                    <a href="#not-yet">§17</a>). From the day it starts, those
+                    records will live 180 days and then be deleted, and that is
+                    the one thing about your requests that will survive the
                     deletion of your account.
                   </dd>
                 </div>
@@ -689,7 +709,7 @@ export default function PrivacyPolicy() {
               <p>
                 <strong>We answer within 30 days</strong> of being able to
                 identify you. If a request would require us to break a law — for
-                instance, deleting a log we are required to keep for 180 days —
+                instance, deleting something a court has ordered us to preserve —
                 we will tell you which part we could not do, and why.
               </p>
               <p>
@@ -747,10 +767,9 @@ export default function PrivacyPolicy() {
               </p>
               <p>
                 At signup you give your date of birth, and a constraint in our
-                database rejects any account for someone under 18 — the check
-                lives in the database rather than in the app precisely so that a
-                modified app cannot get around it. We should be clear about what
-                this is:{" "}
+                database rejects it if it puts you under 18 — the check lives in
+                the database rather than in the app precisely so that a modified
+                app cannot get around it. We should be clear about what this is:{" "}
                 <strong>
                   it is a self-declared date of birth that we enforce, not a
                   verified age
@@ -758,13 +777,35 @@ export default function PrivacyPolicy() {
                 . We do not run identity or document checks.
               </p>
               <p>
-                If we learn that an account belongs to someone under 18, we close
-                it and delete its data. If you believe a child has an account,
-                write to{" "}
+                And we should be equally clear about <em>when</em> it happens,
+                because the order matters to you. Signup verifies your phone
+                number or email address first, and that step already creates an
+                account record holding that number or address. Only afterwards
+                does the app ask for your date of birth. So{" "}
+                <strong>
+                  the constraint refuses the profile, not the record that already
+                  exists
+                </strong>
+                : someone under 18 gets no name, no username, no date of birth
+                stored and no working account — signup can never be completed and
+                The Club cannot be used — but the phone number or email address
+                they verified a moment earlier is still on our servers.
+              </p>
+              <p>
+                Nothing sweeps those refused records automatically today. That is
+                a gap in our implementation, not a decision about your data, and
+                we are fixing it before public release. In the meantime we delete
+                them on request, and we treat a request about someone under 18 as
+                urgent. If you are under 18 and were turned away at that step, or
+                you believe a child has signed up, write to{" "}
                 <a href={`mailto:${LEGAL.grievanceEmail}`}>
                   {LEGAL.grievanceEmail}
-                </a>
-                .
+                </a>{" "}
+                and we will remove what is there.
+              </p>
+              <p>
+                If we learn that a completed account belongs to someone under 18,
+                we close it and delete its data.
               </p>
             </section>
 
@@ -833,9 +874,22 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>The India log archive</dt>
                   <dd>
-                    The 180-day server-log retention described in{" "}
-                    <a href="#retention">§10</a> is being set up in AWS Mumbai
-                    before public release.
+                    Nothing logs your requests today. Before public release we
+                    will start recording, for each request to our API, the{" "}
+                    <strong>
+                      IP address, user agent, timestamp, the path called and a
+                      request identifier
+                    </strong>
+                    , and keeping those records for{" "}
+                    <strong>180 days in AWS Mumbai (ap-south-1)</strong>, as
+                    CERT-In’s direction of 28 April 2022 requires. When it
+                    starts: Amazon Web Services becomes a processor (
+                    <a href="#processors">§8</a>), that archive becomes the one
+                    thing that outlives account deletion (
+                    <a href="#retention">§10</a>), and it is kept to comply with
+                    law rather than on your consent (<a href="#consent">§5</a>).
+                    Each of those sections is written today as what is true
+                    today, and each changes in the release that ships this.
                   </dd>
                 </div>
                 <div>

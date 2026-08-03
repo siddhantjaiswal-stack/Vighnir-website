@@ -119,10 +119,15 @@ export default function TermsOfService() {
               </p>
               <p>
                 We ask for your date of birth at signup and our database refuses
-                any account for someone under 18. That is enforcement of the date
-                you give us, not verification of your age — we do not check
-                documents. If we find out that an account holder is under 18, we
-                close the account and delete its data.
+                to create a profile for anyone under 18, so signup cannot be
+                completed and the account cannot be used. That is enforcement of
+                the date you give us, not verification of your age — we do not
+                check documents. The date of birth is asked for after your phone
+                number or email address has been verified, so a refused signup
+                leaves a record behind; what happens to it is explained in{" "}
+                <Link href="/privacy#children">§14 of the Privacy Policy</Link>.
+                If we find out that an account holder is under 18, we close the
+                account and delete its data.
               </p>
             </section>
 

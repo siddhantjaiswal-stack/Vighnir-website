@@ -8,10 +8,15 @@
  *
  * ── OPEN GAPS (a human must fill these; do not invent values) ───────────────
  *
- *  1. `grievanceOfficerName` is EMPTY. Rule 3(2)(a) of the IT Rules 2021
+ *  1. `grievanceOfficerName` is set to the founder, who is the only named,
+ *     India-resident person attached to this product and already the published
+ *     contact on every one of these pages. Rule 3(2)(a) of the IT Rules 2021
  *     requires an intermediary to publish "the name of the Grievance Officer
- *     and his contact details". A role title alone does not satisfy it. Put a
- *     real, India-resident person's name here and the pages render it.
+ *     and his contact details" — a role title with a bare mailbox under it does
+ *     not satisfy it, which is why this can no longer be blank.
+ *     CONFIRM BEFORE PUSHING: this appoints Siddhant Jaiswal to a statutory
+ *     role with 24-hour acknowledgement and 15-day resolution duties. If
+ *     someone else is to hold it, change this one line and both pages follow.
  *
  *  2. `entity` is the trading name "Vighnir" because nothing on this site or in
  *     the app repo names a registered company. Google Play requires the entity
@@ -40,8 +45,8 @@ export const LEGAL = {
   grievanceEmail: "siddhant.jaiswal@vighnir.com",
   deletionEmail: "siddhant.jaiswal@vighnir.com",
 
-  /** See gap 1. Empty string = not appointed yet; the pages adapt. */
-  grievanceOfficerName: "",
+  /** See gap 1. Named because Rule 3(2)(a) requires a name, not a role title. */
+  grievanceOfficerName: "Siddhant Jaiswal",
 
   /** See gap 3. */
   postalAddress: "Vighnir, Noida, Uttar Pradesh, India",
