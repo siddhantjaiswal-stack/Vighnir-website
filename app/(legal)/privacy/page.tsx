@@ -745,7 +745,7 @@ export default function PrivacyPolicy() {
                 <p>
                   We acknowledge a grievance{" "}
                   <strong>within 24 hours</strong> and resolve it{" "}
-                  <strong>within 15 days</strong>. Complaints about content on
+                  <strong>within 7 days</strong>. Complaints about content on
                   The Club have shorter deadlines — those are set out in the{" "}
                   <Link href="/terms#grievance">Terms of Service</Link>.
                 </p>

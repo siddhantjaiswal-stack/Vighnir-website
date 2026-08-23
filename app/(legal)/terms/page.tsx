@@ -275,7 +275,7 @@ export default function TermsOfService() {
                 On receiving a court order, or a notification from an appropriate
                 government agency, that information hosted on The Club is
                 unlawful, we remove or disable access to it{" "}
-                <strong>as soon as possible and within 36 hours</strong>. We
+                <strong>as soon as possible and within 3 hours</strong>. We
                 retain the information and associated records for at least 180
                 days for investigation, or longer if a court or agency requires
                 it.
@@ -324,10 +324,9 @@ export default function TermsOfService() {
               <p>These are the deadlines we work to:</p>
               <dl className="legal-dl">
                 <div>
-                  <dt>Within 24 hours</dt>
+                  <dt>Within 2 hours</dt>
                   <dd>
-                    We acknowledge your complaint. We also act within 24 hours,
-                    on a complaint by or on behalf of a person, to remove or
+                    On a complaint by or on behalf of a person, we remove or
                     disable content that exposes their private area, shows them
                     in full or partial nudity, shows or depicts them in any sexual
                     act or conduct, or impersonates them — including artificially
@@ -335,7 +334,11 @@ export default function TermsOfService() {
                   </dd>
                 </div>
                 <div>
-                  <dt>Within 72 hours</dt>
+                  <dt>Within 24 hours</dt>
+                  <dd>We acknowledge your complaint.</dd>
+                </div>
+                <div>
+                  <dt>Within 36 hours</dt>
                   <dd>
                     We resolve a request to remove content that breaks the rules
                     in <a href="#prohibited">§6</a>, other than items 1, 4 and 11
@@ -343,7 +346,7 @@ export default function TermsOfService() {
                   </dd>
                 </div>
                 <div>
-                  <dt>Within 15 days</dt>
+                  <dt>Within 7 days</dt>
                   <dd>
                     We resolve every other complaint, and tell you what we did.
                   </dd>
