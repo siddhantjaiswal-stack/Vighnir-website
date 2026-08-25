@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════════════════════
+   VIGHNIR — /get, the destination of "Get The Club".
+   Loaded only by app/get/page.tsx. Uses the tokens and type scale
+   from globals.css; adds nothing global.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* The homepage header is fixed and only turns solid once the GSAP layer
+   mounts. This page has no motion layer, so the header sticks and is solid
+   from the first paint instead — same reasoning as the legal pages. */
+header.site.get-header{position:sticky;top:0}
+
+.get{
+  min-height:calc(100vh - 200px);
+  display:grid;align-items:center;
+  padding:clamp(56px,10vh,120px) 0 clamp(40px,6vh,72px);
+}
+
+.get-wrap{max-width:56ch}
+
+.get-eyebrow{color:var(--faint)}
+
+.get h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(2.1rem,5.2vw,3.6rem);
+  line-height:1.1;letter-spacing:.005em;
+  text-align:left;max-width:18ch;margin:22px 0 0;
+}
+
+.get-lede{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.05rem,1.9vw,1.4rem);
+  line-height:1.55;color:var(--text);
+  max-width:46ch;margin-top:clamp(22px,3.4vh,32px);
+}
+
+/* Shown only once a listing is live; both entries in lib/appStores.ts are
+   null today, so this list renders for nobody. */
+.get-stores{
+  list-style:none;margin:clamp(28px,4.4vh,44px) 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:14px;
+}
+.get-stores a{
+  display:inline-flex;align-items:center;
+  /* 48px: a real touch target, not a link that happens to be tappable. */
+  min-height:48px;padding:0 26px;
+  border:1px solid var(--hair-strong);
+  color:var(--text);text-decoration:none;
+}
+.get-stores a:hover{border-color:var(--text)}
+
+.get-meta{
+  margin-top:clamp(28px,4.4vh,44px);
+  display:flex;flex-wrap:wrap;gap:12px clamp(20px,3vw,40px);
+  color:var(--faint);
+}
+
+.get-back{
+  margin-top:clamp(24px,3.6vh,36px);
+  color:var(--faint);font-size:.95rem;line-height:1.6;
+}
+.get-back a{color:var(--text);text-underline-offset:3px}
