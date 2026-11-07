@@ -26,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${SITE.url}/how-ranking-works`,
+      lastModified: new Date("2026-11-06"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE.url}/account-deletion`,
       lastModified: legalUpdated,
       changeFrequency: "yearly",

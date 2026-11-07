@@ -23,9 +23,17 @@ export default function LegalLayout({
             <Link href="/#brands">Brands</Link>
             <Link href="/#house">House</Link>
             <Link href="/#contact">Contact</Link>
+            <Link href="/how-ranking-works" className="nav-ranking">
+              How ranking works
+            </Link>
           </nav>
         </div>
       </header>
+
+      {/* A fourth nav item does not fit beside the wordmark at 360 px (it made
+          the page scroll sideways), so it shows from 640 px up. Phones reach the
+          page from the app's link. */}
+      <style>{`@media (max-width:639px){.nav-links .nav-ranking{display:none}}`}</style>
 
       {children}
 
