@@ -728,12 +728,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="legal-note glass">
                 <span className="mono">Grievance contact</span>
-                {LEGAL.grievanceOfficerName ? (
-                  <p>
-                    <strong>{LEGAL.grievanceOfficerName}</strong> — Grievance
-                    Officer, {LEGAL.entity}
-                  </p>
-                ) : null}
+                <p>{LEGAL.grievanceOfficerLine}</p>
                 <p>
                   Email:{" "}
                   <a href={`mailto:${LEGAL.grievanceEmail}`}>

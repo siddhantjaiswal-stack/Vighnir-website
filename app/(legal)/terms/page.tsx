@@ -300,13 +300,8 @@ export default function TermsOfService() {
                 complaint about the service, tell our Grievance Officer.
               </p>
               <div className="legal-note glass">
-                <span className="mono">Grievance Officer</span>
-                {LEGAL.grievanceOfficerName ? (
-                  <p>
-                    <strong>{LEGAL.grievanceOfficerName}</strong> —{" "}
-                    {LEGAL.entity}, The Club
-                  </p>
-                ) : null}
+                <span className="mono">Grievance contact</span>
+                <p>{LEGAL.grievanceOfficerLine}</p>
                 <p>
                   Email:{" "}
                   <a href={`mailto:${LEGAL.grievanceEmail}`}>
