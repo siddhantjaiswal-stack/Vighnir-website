@@ -45,6 +45,9 @@ export const LEGAL = {
 
   effective: "3 August 2026",
   effectiveIso: "2026-08-03",
+  /** The privacy page alone was revised on this date (it now names PostHog, D-241); terms and account deletion keep the date above. */
+  privacyEffective: "14 November 2026",
+  privacyEffectiveIso: "2026-11-14",
   version: "1.0",
 
   /** See gap 4. Role mailboxes only; never a personal address. */

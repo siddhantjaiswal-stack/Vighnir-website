@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
           <div className="legal-meta mono">
             <span>
               Effective{" "}
-              <time dateTime={LEGAL.effectiveIso}>{LEGAL.effective}</time>
+              <time dateTime={LEGAL.privacyEffectiveIso}>{LEGAL.privacyEffective}</time>
             </span>
             <span>Version {LEGAL.version}</span>
             <span>India · English</span>
