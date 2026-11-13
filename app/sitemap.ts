@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${SITE.url}/community-rules`,
+      lastModified: legalUpdated,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE.url}/account-deletion`,
       lastModified: legalUpdated,
       changeFrequency: "yearly",

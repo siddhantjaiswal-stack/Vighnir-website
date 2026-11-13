@@ -956,7 +956,7 @@ export default function PrivacyPolicy() {
                 When we change what we do with personal data, we change this page
                 in the same release, and we update the effective date and version
                 at the top. If a change is significant, we will tell you in the
-                app. At least once a year we will remind you that this policy,
+                app. At least every 90 days we will remind you that this policy,
                 the Terms of Service and the rules for using The Club exist and
                 where to read them.
               </p>

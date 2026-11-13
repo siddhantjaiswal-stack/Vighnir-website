@@ -281,7 +281,7 @@ export default function TermsOfService() {
                 it.
               </p>
               <p>
-                <strong>At least once every year</strong> we will remind you of
+                <strong>At least every 90 days</strong> we will remind you of
                 these terms, the Privacy Policy and the rules for using The Club,
                 of any change to them, and that non-compliance can cost you your
                 access to the service or your content.
@@ -420,7 +420,7 @@ export default function TermsOfService() {
                 We will update these terms as The Club changes, and the effective
                 date and version at the top will change with them. Significant
                 changes will be notified in the app, and we will remind you of
-                these terms at least once a year. Continuing to use The Club after
+                these terms at least every 90 days. Continuing to use The Club after
                 a change means you accept the updated terms; if you do not, you
                 can delete your account.
               </p>
