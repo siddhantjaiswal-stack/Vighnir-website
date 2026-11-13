@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "Aquarius hyperlocal advertising",
     "AI sales automation India",
     "creator marketplace India",
-    "Noida startup house",
+    "India startup house",
   ],
   category: "business",
   alternates: { canonical: "/" },
@@ -129,11 +129,10 @@ const jsonLd = {
         email: SITE.email,
         contactType: "partnerships",
       },
-      subOrganization: BRANDS.map((b) => ({
-        "@type": "Organization",
+      brand: BRANDS.map((b) => ({
+        "@type": "Brand",
         name: b.name,
         description: `${b.lead} ${b.desc}`,
-        parentOrganization: { "@id": `${SITE.url}/#organization` },
       })),
     },
     {

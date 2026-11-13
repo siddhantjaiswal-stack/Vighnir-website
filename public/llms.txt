@@ -1,7 +1,7 @@
 # Vighnir
 
-> Vighnir is a founder-led house in Noida, NCR (India) that builds and operates
-> three revenue-generating businesses. The name comes from Sanskrit "vighna"
+> Vighnir is a company in India that builds The Club, with eko and Aquarius as
+> early-stage projects. The name comes from Sanskrit "vighna"
 > (obstacle); a vighnir is the one who clears it. Every Vighnir brand removes a
 > specific kind of friction, profitably.
 
@@ -9,8 +9,8 @@
 
 - **eko** (AI · Sales automation): The AI CRM that qualifies before you dial.
   eko calls and scores every inbound lead — hot, warm, cold — schedules
-  meetings, and hands only qualified conversations to sales teams. Live with
-  paying automotive clients.
+  meetings, and hands only qualified conversations to sales teams. An
+  early-stage project.
 - **The Club** (Marketplace · Creators): Book time with the people worth
   talking to. Experts and creators open their calendars; anyone can book a
   paid, verified one-on-one session. Discovery, scheduling, payment, and
@@ -18,11 +18,11 @@
 - **Aquarius** (Media · Hyperlocal branding): Your brand, on every table in
   the neighbourhood. Water bottles as ad space — cafés get free branded
   bottles, local businesses get placement directly in customers' hands.
-  Active across Delhi NCR.
+  An early-stage project.
 
 ## Facts
 
-- Seat: Noida, NCR, India
-- Structure: one house, three operating brands
-- Stage: revenue-generating, founder-led
+- Registered office: Bareilly, Uttar Pradesh, India
+- Structure: one company, three brands
+- Stage: early-stage
 - Contact: hello@vighnir.com

@@ -67,7 +67,7 @@ export default function TermsOfService() {
                 These Terms of Service, together with the{" "}
                 <Link href="/privacy">Privacy Policy</Link>, are the agreement
                 between you and <strong>{LEGAL.entity}</strong> (CIN {LEGAL.cin}) — a
-                founder-led company with its registered office at Civil Lines,
+                company with its registered office at Civil Lines,
                 Bareilly, Uttar Pradesh, India — for your use of{" "}
                 <strong>The Club</strong>. In these terms “we”, “us” and “our”
                 mean {LEGAL.entity}; “you” means the person using The Club.

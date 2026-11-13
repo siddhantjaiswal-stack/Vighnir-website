@@ -142,7 +142,7 @@ for i in range(520):
 
 # bottom rows
 tracked(dr, (M, H - 92), "EKO · THE CLUB · AQUARIUS", mono_xs, 7, DIM)
-tail = "NOIDA · INDIA"
+tail = ""  # no city on the card: the registered office is Bareilly; no Noida office is claimed
 tail_w = sum(dr.textlength(c, font=mono_xs) + 7 for c in tail)
 tracked(dr, (W - M - tail_w, H - 92), tail, mono_xs, 7, FAINT)
 

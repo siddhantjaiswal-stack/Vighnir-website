@@ -17,7 +17,7 @@ export default function SiteFooter() {
           <Link href="/terms">Terms</Link>
           <Link href="/account-deletion">Delete account</Link>
         </nav>
-        <address style={{ fontStyle: "normal" }}>Noida · India</address>
+        <address style={{ fontStyle: "normal" }}>Registered office: Bareilly, Uttar Pradesh</address>
       </div>
     </footer>
   );

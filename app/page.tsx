@@ -49,9 +49,9 @@ export default function Home() {
               with less in the way.
             </p>
             <div className="hero-meta mono">
-              <span>NCR · India</span>
-              <span>Three operating brands</span>
-              <span>Founder-led</span>
+              <span>India</span>
+              <span>Three brands</span>
+              <span>Early-stage</span>
             </div>
           </div>
           <div className="hint mono" aria-hidden="true">
@@ -122,13 +122,13 @@ export default function Home() {
                 eko removes the friction of lead qualification. The Club removes
                 the friction between wanting an expert&rsquo;s time and getting
                 it. Aquarius removes the friction of hyperlocal advertising. We
-                build lean, launch locally, and let paying customers decide what
+                build lean, launch locally, and let customers decide what
                 grows.
               </p>
               <div className="facts" id="facts">
                 <div className="fact">
-                  <span className="k mono">Seat</span>
-                  <span className="v" data-scramble>Noida, NCR</span>
+                  <span className="k mono">Registered office</span>
+                  <span className="v" data-scramble>Bareilly, Uttar Pradesh</span>
                 </div>
                 <div className="fact">
                   <span className="k mono">Brands</span>
@@ -140,7 +140,7 @@ export default function Home() {
                 </div>
                 <div className="fact">
                   <span className="k mono">Stage</span>
-                  <span className="v" data-scramble>Revenue-generating</span>
+                  <span className="v" data-scramble>Early-stage</span>
                 </div>
               </div>
             </div>

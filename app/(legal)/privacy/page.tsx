@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
               <h2>1. Who we are, and what this covers</h2>
               <p>
                 <strong>The Club</strong> is a social app for India, built and
-                operated by <strong>{LEGAL.entity}</strong>, a founder-led
+                operated by <strong>{LEGAL.entity}</strong>, a
                 company with its registered office in Bareilly, Uttar Pradesh, India. For the purposes
                 of India’s Digital Personal Data Protection Act, 2023 (“the DPDP
                 Act”), {LEGAL.entity} is the <em>Data Fiduciary</em> for the
