@@ -304,9 +304,10 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   <strong>No analytics or crash-reporting SDK in the app
-                  today.</strong> There is no analytics package in the app at
-                  all. We intend to add crash reporting before release and have
-                  described it in advance in <a href="#not-yet">§17</a>.
+                  today.</strong> We have decided to add product analytics
+                  (PostHog) and crash reporting before release, and have
+                  described both in advance in <a href="#not-yet">§17</a>, with
+                  PostHog also named in <a href="#processors">§8</a>.
                 </li>
                 <li>
                   <strong>No payments.</strong> The Club does not process
@@ -482,6 +483,22 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Apple</dt>
                   <dd>Only if you choose Sign in with Apple. Same.</dd>
+                </div>
+                <div>
+                  <dt>PostHog Inc. (United States)</dt>
+                  <dd>
+                    Product analytics for this website and, from the app
+                    release described in <a href="#not-yet">§17</a>, for the app.
+                    It receives which screen or page was viewed, a few named
+                    actions (for example that a post was created), your device
+                    type, app version and language, and, in the app, your
+                    internal account identifier. It does not receive your name,
+                    phone number, email address, date of birth or location, and
+                    your IP address is discarded and not used to work out where
+                    you are. It is not used on the sign-in, phone, one-time
+                    password, birth-date, messaging or payment screens. See{" "}
+                    <a href="#website">§16</a> and <a href="#not-yet">§17</a>.
+                  </dd>
                 </div>
                 <div>
                   <dt>Vercel</dt>
@@ -828,6 +845,17 @@ export default function PrivacyPolicy() {
                 sites, and we do not build a profile of you from this website.
               </p>
               <p>
+                vighnir.com also sends page views to PostHog Inc. (United
+                States), to show us how many people visit and which sites send
+                them. This is set up without cookies: nothing is stored on your
+                device, so the site cannot recognise you from one visit to the
+                next, and we do not identify you. PostHog receives the page
+                address, the site that referred you, and your browser and
+                device type; your IP address is discarded and not used to
+                locate you. If your browser sends a “Do Not Track” signal,
+                nothing is sent.
+              </p>
+              <p>
                 If you email us from the address on this site, we hold that email
                 in our mailbox for as long as we need it to deal with what you
                 wrote about.
@@ -854,6 +882,23 @@ export default function PrivacyPolicy() {
                     address, date of birth or location — and personal data will
                     be stripped before an error report leaves your device and
                     again on our servers.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Product analytics in the app</dt>
+                  <dd>
+                    We have decided to add product analytics to the app, using
+                    PostHog Inc. (United States), starting with the next app
+                    release. It records which screens are opened and a few
+                    named actions (signing up, posting, watching a Mini, booking
+                    a session). It identifies you only by your internal account
+                    identifier, never by phone number, email address, name, date
+                    of birth or location, and your IP address is discarded. It
+                    is never active on the sign-in, phone, one-time password,
+                    birth-date, messaging or payment screens, and it is switched
+                    off for any account that is under 18 or held for age
+                    reasons. This policy will be updated, if anything above
+                    changes, in the same release.
                   </dd>
                 </div>
                 <div>

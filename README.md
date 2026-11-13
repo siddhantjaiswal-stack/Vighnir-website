@@ -25,6 +25,20 @@ npm run dev        # http://localhost:3000
 
 After deploy, add the domain in Vercel → Settings → Domains.
 
+## Analytics (PostHog, cookieless) — D-241
+
+`instrumentation-client.ts` loads `posthog-js` in the browser: page views only, `persistence: "memory"`
+(no cookie, no localStorage), the visitor's IP discarded by the PostHog project setting `anonymize_ips`.
+It is inert unless these two Vercel environment variables are set (Production, and Preview if wanted):
+
+| Variable | Value |
+|---|---|
+| `NEXT_PUBLIC_POSTHOG_KEY` | the project key, starts `phc_` (public by design; it can only write events) |
+| `NEXT_PUBLIC_POSTHOG_HOST` | `https://us.i.posthog.com` |
+
+`NEXT_PUBLIC_*` values are compiled into the bundle at build time, so redeploy after setting them. Never
+put the personal API key (`phx_`) here. The privacy page (§8, §16, §17) names PostHog Inc. (USA) as a processor.
+
 ## SEO / AEO — what's included
 
 - Static prerender: full HTML + content for crawlers, no JS needed.
