@@ -369,10 +369,13 @@ export default function PrivacyPolicy() {
                   <dd>
                     For each image you upload, we make a fingerprint (a hash) on
                     our own servers. We send only that fingerprint, never the
-                    image, to the Arachnid Shield service of the Canadian Centre
-                    for Child Protection. It tells us whether the fingerprint
-                    matches known child sexual abuse material. We do this to
-                    meet our legal duty to keep that material off The Club.
+                    image, to the Microsoft PhotoDNA cloud service in the United
+                    States. It tells us whether the fingerprint matches known
+                    child sexual abuse material. If the Microsoft service cannot
+                    be reached, we send the same fingerprint, and nothing else,
+                    to the Arachnid Shield service of the Canadian Centre for
+                    Child Protection instead. We do this to meet our legal duty
+                    to keep that material off The Club.
                   </dd>
                 </div>
               </dl>
@@ -656,8 +659,7 @@ export default function PrivacyPolicy() {
                     location. Your IP address is discarded and not used to work
                     out where you are. It is never active on the sign-in, phone,
                     code, birth-date, messaging, call or payment screens. It is
-                    switched off for an account that is under 18 or held for age
-                    reasons.
+                    switched off when sign-up refuses someone as under 18.
                   </dd>
                 </div>
                 <div>
@@ -1012,10 +1014,20 @@ export default function PrivacyPolicy() {
                   </dd>
                 </div>
                 <div>
+                  <dt>Microsoft (United States)</dt>
+                  <dd>
+                    Its PhotoDNA cloud service is our main check against known
+                    child sexual abuse material. It receives the fingerprint
+                    (hash) of every image you upload, never the image. See{" "}
+                    <a href="#collect">§3</a>.
+                  </dd>
+                </div>
+                <div>
                   <dt>Canadian Centre for Child Protection</dt>
                   <dd>
-                    Its Arachnid Shield service receives the fingerprint (hash)
-                    of images you upload, never the image. See{" "}
+                    Its Arachnid Shield service is our backup for that check. It
+                    receives the fingerprint (hash) of an image only when the
+                    Microsoft service cannot be reached, never the image. See{" "}
                     <a href="#collect">§3</a>.
                   </dd>
                 </div>
@@ -1126,6 +1138,13 @@ export default function PrivacyPolicy() {
                   <dt>Usage analytics</dt>
                   <dd>
                     <strong>United States</strong> (PostHog).
+                  </dd>
+                </div>
+                <div>
+                  <dt>Known-image check</dt>
+                  <dd>
+                    <strong>United States</strong> (Microsoft). The backup
+                    service, Arachnid Shield, is in Canada.
                   </dd>
                 </div>
                 <div>
@@ -1545,8 +1564,8 @@ export default function PrivacyPolicy() {
                 </a>{" "}
                 and we will treat it as urgent. If we learn that a completed
                 account belongs to someone under 18, we close it and delete its
-                data. Analytics are switched off for an account held for age
-                reasons.
+                data. Analytics are switched off when sign-up refuses someone
+                as under 18.
               </p>
             </section>
 
