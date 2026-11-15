@@ -367,8 +367,9 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Screenshot alerts</dt>
                   <dd>
-                    If you take a screenshot of a view-once photo, a story or a
-                    Moment, the app tells our servers. We record that you took
+                    Once screenshot alerts are switched on (<a href="#not-yet">§17</a>), if you
+                    take a screenshot of a view-once photo, a story or a Moment, the app tells
+                    our servers. We record that you took
                     one, never the screenshot itself, which stays on your phone.
                     The person it belongs to is told: in the chat for a view-once
                     photo, and on their “Seen by” list for a story or Moment. We
@@ -1670,6 +1671,15 @@ export default function PrivacyPolicy() {
                     selfie, as in <a href="#collect">§3</a>. Once it is on, a host
                     whose face was already checked will only need to submit an ID
                     through DigiLocker.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Screenshot alerts</dt>
+                  <dd>
+                    Telling someone that a screenshot was taken of their
+                    view-once photo, story or Moment is built but not yet
+                    switched on. Until it is, nothing is recorded. When we
+                    switch it on, §3 describes what is kept.
                   </dd>
                 </div>
                 <div>

@@ -161,13 +161,17 @@ export default function AccountDeletion() {
                   <dt>Within 30 days</dt>
                   <dd>
                     Your account and the data listed in <a href="#deleted">§5</a>{" "}
-                    are deleted, and we confirm it to you in writing. In practice it is normally much sooner; 30 days is the outside limit. Database backups are kept 7 days, so a deleted account can still sit in a backup until it ages out (§6).
+                    are deleted, and we confirm it to you in writing. In practice it is normally
+                    much sooner; 30 days is the outside limit. Database backups are kept 7 days,
+                    so a deleted account can still sit in a backup until it ages out (§6).
                   </dd>
                 </div>
                 <div>
                   <dt>180 days</dt>
                   <dd>
-                    The life of the server-log archive described in <a href="#kept">§6</a>, which Indian law requires. Those records are not removed when you delete your account.
+                    The life of the server-log archive described in <a href="#kept">§6</a>,
+                    which Indian law requires. Those records are not removed when you delete
+                    your account.
                   </dd>
                 </div>
               </dl>
@@ -193,7 +197,8 @@ export default function AccountDeletion() {
                 </li>
                 
                 <li>
-                  your <strong>username</strong>, which is reserved for 30 days so nobody can pretend to be you, and is free after that;
+                  your <strong>username</strong>, which is reserved for 30 days so nobody can
+                  pretend to be you, and is free after that;
                 </li>
                 <li>
                   your <strong>profile photo</strong>, deleted from our media
@@ -218,9 +223,9 @@ export default function AccountDeletion() {
                   and Close Friends, and your matches from contact sync;
                 </li>
                 <li>
-                  your <strong>Floor</strong> name and your face code at AWS (the
-                  face code is deleted first), and your <strong>notification
-                  settings and push tokens</strong>;
+                  your <strong>Floor</strong> identity, which is retired (the name stays
+                  reserved so nobody else can take it), your face code at AWS (deleted first),
+                  and your <strong>notification settings and push tokens</strong>;
                 </li>
                 <li>
                   your <strong>messages</strong>: each one you sent is unsent, so
@@ -234,7 +239,8 @@ export default function AccountDeletion() {
               <p>
                 Where you used <strong>Sign in with Apple</strong>, breaking the
                 link with your Apple ID is part of the deletion: we revoke the
-                token Apple issued for The Club. This applies from the first release onwards (<a href="#in-app">§2</a>).
+                token Apple issued for The Club. This applies from the first release onwards
+                (<a href="#in-app">§2</a>).
               </p>
             </section>
 
@@ -242,7 +248,8 @@ export default function AccountDeletion() {
             <section id="kept">
               <h2>6. What we keep, and for how long</h2>
               <p>
-                Narrow exceptions, listed rather than quietly relied on. The full table is in <Link href="/privacy#retention">Privacy §10</Link>.
+                Narrow exceptions, listed rather than quietly relied on. The full table is
+                in <Link href="/privacy#retention">Privacy §10</Link>.
               </p>
               <dl className="legal-dl">
                 <div>
@@ -319,7 +326,8 @@ export default function AccountDeletion() {
                 </div>
               </dl>
               <p>
-                Beyond those, nothing is kept. We do not retain a shadow profile, and we do not pass anything to an advertiser — there are none.
+                Beyond those, nothing is kept. We do not retain a shadow profile, and we do
+                not pass anything to an advertiser — there are none.
               </p>
             </section>
 
