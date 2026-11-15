@@ -108,14 +108,14 @@ export default function AccountDeletion() {
                   The Club has not yet been released on the App Store or Google
                   Play.
                 </strong>{" "}
-                Deletion from inside the app is being built, and it will be in
-                the app from its first release — you will find it in your account
-                settings. Until then, and after that as well, the email route
-                above works and is carried out by a person.
-              </p>
-              <p>
-                We would rather tell you that than put a screenshot here of a
-                button that does not exist yet.
+                From its first release you can delete your account yourself inside the app:{" "}
+                <strong>Settings → Account → Delete account</strong>. A code is
+                sent to the phone number on your account, so an account with no
+                verified phone number has to add one first. Once you enter the
+                code you are signed out on every device and the deletion starts
+                about 16 minutes later, once any sign-in already issued has
+                expired. There is no undo. The email route above works as well,
+                before and after the release, and is carried out by a person.
               </p>
             </section>
 
@@ -161,19 +161,13 @@ export default function AccountDeletion() {
                   <dt>Within 30 days</dt>
                   <dd>
                     Your account and the data listed in <a href="#deleted">§5</a>{" "}
-                    are deleted, and we confirm it to you in writing. In practice
-                    it is normally much sooner; 30 days is the outside limit,
-                    including the time for the deletion to work through backups.
+                    are deleted, and we confirm it to you in writing. In practice it is normally much sooner; 30 days is the outside limit. Database backups are kept 7 days, so a deleted account can still sit in a backup until it ages out (§6).
                   </dd>
                 </div>
                 <div>
                   <dt>180 days</dt>
                   <dd>
-                    Not a deadline that applies to anyone yet. It is the life of
-                    the server-log archive described in <a href="#kept">§6</a>,
-                    which Indian law requires and which we have not built —
-                    today, deleting your account leaves no request records
-                    behind, because there are none.
+                    The life of the server-log archive described in <a href="#kept">§6</a>, which Indian law requires. Those records are not removed when you delete your account.
                   </dd>
                 </div>
               </dl>
@@ -197,13 +191,9 @@ export default function AccountDeletion() {
                   address, and the Google or Apple account identifier linked to
                   you;
                 </li>
+                
                 <li>
-                  your <strong>password</strong>, if you had one (we only ever
-                  held a hash of it);
-                </li>
-                <li>
-                  your <strong>username</strong>, which is released back into
-                  circulation for anyone else to claim;
+                  your <strong>username</strong>, which is reserved for 30 days so nobody can pretend to be you, and is free after that;
                 </li>
                 <li>
                   your <strong>profile photo</strong>, deleted from our media
@@ -219,16 +209,32 @@ export default function AccountDeletion() {
                   number or email address;
                 </li>
                 <li>
-                  anything you have posted on The Club, once the features that
-                  let you post exist.
+                  your <strong>posts, Minis, stories, drafts and comments</strong>, your
+                  likes, saves and hides, and the files behind them, which leave
+                  storage within 30 days;
+                </li>
+                <li>
+                  your <strong>club</strong>: who you club, your requests, blocks
+                  and Close Friends, and your matches from contact sync;
+                </li>
+                <li>
+                  your <strong>Floor</strong> name and your face code at AWS (the
+                  face code is deleted first), and your <strong>notification
+                  settings and push tokens</strong>;
+                </li>
+                <li>
+                  your <strong>messages</strong>: each one you sent is unsent, so
+                  its text is gone for the other person too. The chat stays on
+                  their side and is closed to new messages. The earlier text of
+                  an edited or unsent message is kept for 30 days, visible only
+                  to our safety team, then destroyed. Photos and voice notes you
+                  sent in chats leave storage on the same 30-day footing
                 </li>
               </ul>
               <p>
                 Where you used <strong>Sign in with Apple</strong>, breaking the
                 link with your Apple ID is part of the deletion: we revoke the
-                token Apple issued for The Club. Sign in with Apple is not in a
-                released build yet — see <a href="#in-app">§2</a> — so this
-                applies from the first release onwards.
+                token Apple issued for The Club. This applies from the first release onwards (<a href="#in-app">§2</a>).
               </p>
             </section>
 
@@ -236,25 +242,17 @@ export default function AccountDeletion() {
             <section id="kept">
               <h2>6. What we keep, and for how long</h2>
               <p>
-                Narrow exceptions, listed rather than quietly relied on. The
-                first of them does not exist yet, and we say so instead of
-                letting you assume the worst.
+                Narrow exceptions, listed rather than quietly relied on. The full table is in <Link href="/privacy#retention">Privacy §10</Link>.
               </p>
               <dl className="legal-dl">
                 <div>
-                  <dt>Server request logs — none today; 180 days once they exist</dt>
+                  <dt>Server request logs — 180 days</dt>
                   <dd>
-                    <strong>
-                      We keep no request logs at the moment, so a deletion today
-                      removes everything and leaves no trace of your requests.
-                    </strong>{" "}
-                    CERT-In’s direction of 28 April 2022 requires providers to
-                    keep ICT system logs — IP address, user agent, timestamp, the
-                    path called and a request identifier — for a rolling 180 days
-                    within Indian jurisdiction, and we are setting that up in AWS
-                    Mumbai before public release (
-                    <Link href="/privacy#not-yet">Privacy §17</Link>). From then
-                    on, those records survive the deletion of your account and are
+                    CERT-In’s direction of 28 April 2022 requires providers to keep ICT
+                    system logs — IP address, user agent, timestamp, the path
+                    called and a request identifier — for a rolling 180 days
+                    within Indian jurisdiction. We keep them in India (Mumbai).
+                    Those records survive the deletion of your account and are
                     erased when they are 180 days old. They are not searchable by
                     name and are used only for security and to answer a lawful
                     request.
@@ -272,22 +270,56 @@ export default function AccountDeletion() {
                 <div>
                   <dt>A signup that never finished</dt>
                   <dd>
-                    One case where we keep something without meaning to. If you
-                    verified a phone number or email address and signup then
-                    stopped — most often because the 18+ check refused the date of
-                    birth you gave — the record created by that verification stays
-                    on our servers, and nothing removes it automatically today.
-                    There is no profile, no username and no usable account behind
-                    it, but the number or address is there. It is a gap we are
-                    closing before public release; until then, email us as in{" "}
-                    <a href="#request">§1</a> and a person deletes it.
+                    If you verified a phone number or email address and signup
+                    then stopped — most often because the 18+ check refused the
+                    date of birth you gave — the verification record has no
+                    profile, no username and no usable account behind it. It is
+                    swept after 30 days. If you want it gone sooner, email us as
+                    in <a href="#request">§1</a> and a person deletes it.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Database backups — 7 days</dt>
+                  <dd>
+                    Backups of our database are kept for 7 days and then
+                    discarded. A deleted account can still sit in a backup until
+                    that backup ages out. We do not restore a backup to bring a
+                    deleted account back.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Booking, payment and payout records</dt>
+                  <dd>
+                    If you booked or hosted a paid session, the payment record
+                    stays, with your name and identifiers removed, because the
+                    law requires us to keep it, including for tax. The words of a
+                    review you wrote are removed; the star rating stays.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Reports and safety decisions</dt>
+                  <dd>
+                    Reports about other people, and our decisions on them, stay
+                    after you leave, for as long as safety and legal duties
+                    require. A message or file our safety team removed can be
+                    kept for up to 180 days so a decision can be appealed or a
+                    legal request answered.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Usage analytics and error reports</dt>
+                  <dd>
+                    They carry only an internal account id, with no name, phone,
+                    email or location. Deleting your account does not yet remove
+                    them automatically at PostHog or Sentry. If you want them
+                    erased too, write to{" "}
+                    <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a>{" "}
+                    and we will delete them.
                   </dd>
                 </div>
               </dl>
               <p>
-                Beyond those, nothing is kept. We do not retain a shadow profile,
-                we do not keep your data “for analytics”, and we do not pass
-                anything to an advertiser — there are none.
+                Beyond those, nothing is kept. We do not retain a shadow profile, and we do not pass anything to an advertiser — there are none.
               </p>
             </section>
 

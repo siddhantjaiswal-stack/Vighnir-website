@@ -19,7 +19,7 @@ const TOC = [
   ["enforcement", "Removal & termination"],
   ["grievance", "Reporting & grievances"],
   ["privacy", "Privacy"],
-  ["payments", "No payments today"],
+  ["payments", "Payments"],
   ["service", "Availability & liability"],
   ["changes", "Changes"],
   ["law", "Governing law"],
@@ -99,11 +99,12 @@ export default function TermsOfService() {
                 <span className="mono">What exists on the effective date</span>
                 <p>
                   The Club has <strong>not yet been released</strong> on the App
-                  Store or Google Play. The part of it that is built is{" "}
-                  <strong>creating an account and signing in</strong>. These
-                  terms are written to govern the service as a whole, including
-                  the parts that arrive later — but we are not going to describe
-                  features as if you can use them today.
+                  Store or Google Play. These terms take effect with its first
+                  release and are written for the app as it is built for that
+                  release: posts and Minis, messages, The Floor, Nearby, voice
+                  and video calls, and paid bookings with hosts. A feature that
+                  is decided but not switched on is not described as if it were
+                  live.
                 </p>
               </div>
             </section>
@@ -376,17 +377,19 @@ export default function TermsOfService() {
 
             {/* ── 10 ── */}
             <section id="payments">
-              <h2>10. No payments today</h2>
+              <h2>10. Payments</h2>
               <p>
-                The Club does not take payments. There are no paid features, no
-                subscriptions and no bookings you can pay for today, and we hold
-                no card, UPI or bank information.
+                The Club has no subscriptions and no paid features of its own. The
+                one thing you can pay for is a session you book with a host. You
+                pay on the payment page of Cashfree, a licensed payment company,
+                and we never see or hold your card number, UPI PIN or bank
+                password. What we keep, and what we send Cashfree, is in the{" "}
+                <Link href="/privacy#collect">Privacy Policy</Link>.
               </p>
               <p>
-                Paid bookings are planned. If and when they arrive they will run
-                through a licensed payment provider, and these terms will be
-                updated with the pricing, cancellation and refund rules{" "}
-                <em>before</em> anyone can pay for anything — not afterwards.
+                These terms do not yet set the pricing, cancellation and refund rules
+                for a paid session. They will be updated with those rules{" "}
+                <em>before</em> anyone can pay for a session — not afterwards.
               </p>
             </section>
 

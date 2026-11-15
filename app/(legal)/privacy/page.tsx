@@ -134,8 +134,9 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   Your account database is in <strong>India (Mumbai)</strong>.
-                  Some live traffic, and the app’s usage analytics, go outside
-                  India. <a href="#where">§9</a> says exactly what and where.
+                  Some live traffic, image fingerprints for the known-abuse
+                  check, and the app’s usage analytics, go outside India.{" "}
+                  <a href="#where">§9</a> says exactly what and where.
                 </li>
                 <li>
                   You can delete your account inside the app, ask for a copy of
@@ -258,8 +259,11 @@ export default function PrivacyPolicy() {
                     <strong>city and the country</strong>, and the latitude and
                     longitude <strong>rounded to two decimal places</strong>{" "}
                     (about a kilometre). We never store your phone’s exact
-                    position here. Your city is used to suggest people near you.
-                    You can skip this step.
+                    position here. Your city is used to suggest people near
+                    you. Your phone’s own map service, Apple’s on iPhone and
+                    Google’s on Android, turns your position, or a place you
+                    type, into a city. See <a href="#processors">§8</a>. You
+                    can skip this step.
                   </dd>
                 </div>
               </dl>
@@ -352,6 +356,26 @@ export default function PrivacyPolicy() {
                   </dd>
                 </div>
                 <div>
+                  <dt>Who saw your story or Moment</dt>
+                  <dd>
+                    When you view someone’s story or Moment, we record that you
+                    saw it. The person who posted it sees you in their{" "}
+                    <strong>“Seen by”</strong> list. The record is deleted within
+                    a few days after the story ends.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Screenshot alerts</dt>
+                  <dd>
+                    If you take a screenshot of a view-once photo, a story or a
+                    Moment, the app tells our servers. We record that you took
+                    one, never the screenshot itself, which stays on your phone.
+                    The person it belongs to is told: in the chat for a view-once
+                    photo, and on their “Seen by” list for a story or Moment. We
+                    keep that record for 30 days.
+                  </dd>
+                </div>
+                <div>
                   <dt>Automated safety checks</dt>
                   <dd>
                     A new post or Mini is checked by an automated system for
@@ -396,7 +420,8 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Edits and unsends</dt>
                   <dd>
-                    You can edit a message for 15 minutes and unsend it. When you
+                    You can edit the text of a message for 15 minutes after
+                    you send it, and unsend it at any time. When you
                     edit or unsend, the earlier text or the unsent message is
                     kept for <strong>30 days</strong>, visible only to our safety
                     team, in case it is reported. Then it is destroyed.
@@ -739,9 +764,7 @@ export default function PrivacyPolicy() {
                 for your <strong>contacts</strong> only for contact sync. It asks
                 for your <strong>photos</strong> so you can choose an image. It
                 asks for your <strong>location while the app is open</strong>,
-                only when you use the location step or Nearby. On iPhone it uses
-                motion data only to improve location accuracy when you share where
-                you are, and Face ID only to unlock the sign-in on your device.
+                only when you use the location step or Nearby.
                 The app never reads your location in the background. It does not
                 read your calendar or your SMS inbox.
               </p>
@@ -996,6 +1019,16 @@ export default function PrivacyPolicy() {
                     If you choose Sign in with Apple, the same. On iPhone, Apple’s
                     push service delivers notifications and incoming calls, and
                     App Attest checks that the app is genuine.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Your phone’s map service (Apple or Google)</dt>
+                  <dd>
+                    In the location step, your phone turns your position, or a
+                    place you type, into a city using its own map service: Apple’s
+                    on iPhone, Google’s on Android. They receive that position or
+                    that text from your phone, under their own policies. We do not
+                    send it to them.
                   </dd>
                 </div>
                 <div>
@@ -1437,8 +1470,10 @@ export default function PrivacyPolicy() {
                     Have inaccurate data corrected, incomplete data completed,
                     outdated data updated, or your data erased. You can delete
                     your whole account yourself in the app: Settings → Account →
-                    Delete account. A code is sent to your phone. Once you enter
-                    it you are signed out everywhere and the deletion starts.
+                    Delete account. A code is sent to the phone number on your
+                    account, so an account with no verified phone number has
+                    to add one first. Once you enter it you are signed out
+                    everywhere and the deletion starts.
                     There is no undo. What deletion cannot reach, and what we must
                     keep, is on{" "}
                     <Link href="/account-deletion">the deletion page</Link>. If
