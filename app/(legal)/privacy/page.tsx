@@ -398,8 +398,9 @@ export default function PrivacyPolicy() {
                   <dd>
                     You can edit a message for 15 minutes and unsend it. When you
                     edit or unsend, the earlier text or the unsent message is
-                    kept for <strong>30 days</strong>, visible only to our safety
+                    kept for <strong>180 days</strong>, visible only to our safety
                     team, in case it is reported. Then it is destroyed.
+                    Deleting your account does not cut that short.
                   </dd>
                 </div>
                 <div>
@@ -1180,8 +1181,9 @@ export default function PrivacyPolicy() {
                   <dt>Account and profile</dt>
                   <dd>
                     For as long as your account exists. When you delete it in the
-                    app, you are signed out everywhere and the deletion starts
-                    within about 16 minutes. See{" "}
+                    app, your sign-ins end at once (one already open on another
+                    phone can keep working for up to 15 minutes) and the deletion
+                    starts within about 16 minutes. See{" "}
                     <Link href="/account-deletion">account deletion</Link>.
                   </dd>
                 </div>
@@ -1205,9 +1207,10 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Edited, unsent and removed messages</dt>
                   <dd>
-                    The earlier text, or the unsent message, is kept for 30 days,
-                    visible only to our safety team, then destroyed. A message our
-                    safety team removes can be kept for up to 180 days.
+                    The earlier text, or the unsent message, is kept for 180 days,
+                    visible only to our safety team, then destroyed. Deleting your
+                    account does not cut that short. A message our safety team
+                    removes can also be kept for up to 180 days.
                   </dd>
                 </div>
                 <div>
@@ -1439,7 +1442,8 @@ export default function PrivacyPolicy() {
                     your whole account yourself in the app: Profile → ⋮ →
                     Settings → Delete account (at the bottom, under Log out).
                     A code is sent to your phone. Once you enter
-                    it you are signed out everywhere and the deletion starts.
+                    it your sign-ins end at once and the deletion starts (a sign-in
+                    already open on another phone can work for up to 15 minutes).
                     There is no undo. What deletion cannot reach, and what we must
                     keep, is on{" "}
                     <Link href="/account-deletion">the deletion page</Link>. If

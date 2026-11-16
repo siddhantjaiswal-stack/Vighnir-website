@@ -28,7 +28,7 @@ export default function AccountDeletion() {
       "I would like my account on The Club deleted, along with the personal data associated with it.",
       "",
       "My username: ",
-      "How I sign in (phone, Google or Apple): ",
+      "How I sign in (phone, email, Google or Apple): ",
       "The phone number or email address on the account: ",
       "",
       "I understand my account cannot be restored once it is deleted.",
@@ -78,8 +78,8 @@ export default function AccountDeletion() {
               <p>
                 You can delete your account yourself inside the app. It works
                 the same whether you signed in with your{" "}
-                <strong>phone number</strong>, with <strong>Google</strong> or
-                with <strong>Apple</strong>.
+                <strong>phone number</strong>, your <strong>email</strong>,
+                with <strong>Google</strong> or with <strong>Apple</strong>.
               </p>
               <ol>
                 <li>
@@ -108,16 +108,18 @@ export default function AccountDeletion() {
               <p>
                 Every account that has finished signing up has a verified phone
                 number, because one is needed to finish, including when you
-                sign up with Google or Apple. That number is the one the code goes to.
-                If you have lost the phone number or the app, use{" "}
+                sign up with your email, Google or Apple. That number is the one
+                the code goes to. If you have lost the phone number or the app, use{" "}
                 <a href="#request">§2</a> instead.
               </p>
               <div className="legal-note glass">
                 <span className="mono">Before you tap it</span>
                 <p>
                   Deleting is <strong>permanent</strong>. There is no undo and
-                  no grace period in which to change your mind. You are signed
-                  out of every device the moment you confirm.
+                  no grace period in which to change your mind. Your sign-ins
+                  are ended the moment you confirm. A sign-in already open on
+                  another phone can keep working for up to 15 minutes, so the
+                  deletion itself waits that long (<a href="#when">§3</a>).
                 </p>
               </div>
             </section>
@@ -149,8 +151,8 @@ export default function AccountDeletion() {
                   your <strong>username</strong> on The Club, if you remember it;
                 </li>
                 <li>
-                  <strong>how you signed in</strong> — phone, Google or Apple;
-                  and
+                  <strong>how you signed in</strong> — phone, email, Google or
+                  Apple; and
                 </li>
                 <li>
                   the <strong>phone number or email address</strong> on the
@@ -167,6 +169,12 @@ export default function AccountDeletion() {
                 the same way as a deletion from the app (<a href="#when">§3</a>
                 ).
               </p>
+              <p>
+                If you started signing up but never finished, there is no
+                account to delete. What a half-finished sign-up left behind is
+                removed by our daily clean-up, 30 days after the sign-up ended
+                by default. Write to us if you want it gone sooner.
+              </p>
             </section>
 
             {/* ── 3 ── */}
@@ -176,16 +184,18 @@ export default function AccountDeletion() {
                 <div>
                   <dt>At once</dt>
                   <dd>
-                    You are signed out of every device and notifications stop,
-                    the moment you confirm in the app or we start the deletion
-                    for you.
+                    Your sign-ins are ended and notifications stop, the moment
+                    you confirm in the app or we start the deletion for you. A
+                    sign-in token already issued to another phone can keep
+                    working for up to 15 minutes after that, which is why the
+                    deletion below waits.
                   </dd>
                 </div>
                 <div>
                   <dt>About 20 minutes</dt>
                   <dd>
                     The deletion itself. It starts after a short safety delay
-                    of about 16 minutes, so that any sign-in still open on
+                    of about 16 minutes, so that any sign-in token still open on
                     another phone has expired first. Your profile, posts,
                     messages and the other things in <a href="#deleted">§4</a>{" "}
                     are then removed in a few minutes. If a step has to be
@@ -196,8 +206,8 @@ export default function AccountDeletion() {
                   <dt>Within 30 days</dt>
                   <dd>
                     Photos and videos are removed from our file storage within
-                    30 days. Copies of messages you sent in the 30 days before you
-                    deleted are destroyed once each is 30 days old (see{" "}
+                    30 days. Copies of messages you sent in the 30 days before
+                    you deleted are destroyed once each is 30 days old (see{" "}
                     <a href="#things">§5</a>). Your username is held back for
                     30 days, then it is free for anyone.
                   </dd>
@@ -213,7 +223,9 @@ export default function AccountDeletion() {
                   <dt>180 days</dt>
                   <dd>
                     The two things Indian law makes us keep after an account is
-                    gone — your registration details and our server logs. See{" "}
+                    gone — your registration details and our server logs — and
+                    the earlier version of any message you edited or unsent,
+                    which our safety team can see for 180 days. See{" "}
                     <a href="#kept">§6</a>.
                   </dd>
                 </div>
@@ -245,7 +257,9 @@ export default function AccountDeletion() {
                 </li>
                 <li>
                   your <strong>sign-in details</strong> — phone number, email
-                  address, and the Google or Apple identifier linked to you;
+                  address, and the Google or Apple identifier linked to you (a
+                  copy of some of these is kept for 180 days, see{" "}
+                  <a href="#kept">§6</a>);
                 </li>
                 <li>
                   your <strong>username</strong> (held back for 30 days, then
@@ -268,7 +282,8 @@ export default function AccountDeletion() {
                 </li>
                 <li>
                   your <strong>messages</strong>, and the photos and voice notes
-                  you sent (see <a href="#things">§5</a>);
+                  you sent (see <a href="#things">§5</a> for the copies that
+                  stay for a time);
                 </li>
                 <li>
                   your <strong>Floor persona</strong> and what you posted there;
@@ -327,7 +342,13 @@ export default function AccountDeletion() {
                     words, photos or voice notes. Words and attachments from
                     messages you sent in the 30 days before you deleted are
                     copied first to a store only our safety team can open, and
-                    destroyed once each message is 30 days old. A message our safety team
+                    destroyed once each message is 30 days old. Separately,
+                    when you edit or unsend a message, the earlier version is
+                    held in that same safety-only store for{" "}
+                    <strong>180 days</strong> from the edit or unsend, in case
+                    it is reported. Deleting your account does not cut that
+                    short: a copy already held stays until its own time runs
+                    out, then it is destroyed. A message our safety team
                     removed, or a chat under a legal hold or an open report,
                     can be kept longer, until that ends.
                   </dd>
@@ -352,7 +373,12 @@ export default function AccountDeletion() {
                   <dd>
                     Any booking that is still open — requested, accepted or
                     confirmed — is cancelled for both people, and anyone who had
-                    already paid for it gets the money back in full. Payment
+                    already paid for it gets the money back in full. If you
+                    delete while a paid session is live, that session ends under
+                    its own rules instead: if you both had joined, it counts as
+                    completed; if you had not joined, it counts as your no-show;
+                    if you had joined and the other person had not, it is
+                    cancelled and they are refunded in full. Payment
                     records (the orders, refunds and payouts that any receipt
                     or invoice is built from) are <strong>not</strong> deleted,
                     because payment and tax law makes us keep them. Your name,
@@ -374,23 +400,25 @@ export default function AccountDeletion() {
             <section id="kept">
               <h2>6. What is kept, and why</h2>
               <p>
-                A short list, kept for stated reasons and for stated times.
-                Nothing else is kept: there is no shadow profile, and your data
-                is not kept “for analytics”.
+                These are the things that stay after an account is deleted,
+                each for a stated reason. There is no shadow profile, and your
+                data is not kept “for analytics”.
               </p>
               <dl className="legal-dl">
                 <div>
                   <dt>Your registration details — 180 days</dt>
                   <dd>
                     Your phone number, email address, the names of the sign-in
-                    methods you used (phone, Google, Apple — never your Google
-                    or Apple identifier) and the date you signed up. India’s
+                    methods you used (phone, email, Google, Apple — never your
+                    Google or Apple identifier) and the date you signed up. India’s
                     Information Technology (Intermediary Guidelines) Rules,
                     2021 require us to keep registration details for 180 days
                     after an account is cancelled. The copy is locked away,
                     read by nothing in the app, and used only to answer a lawful
                     request. A daily clean-up deletes it after 180 days, unless
-                    a legal hold applies.
+                    a legal hold applies. 180 days is our default and the
+                    shortest we allow; our officers can lengthen it if a legal
+                    reason requires, and then we keep it for that longer time.
                   </dd>
                 </div>
                 <div>
@@ -405,6 +433,28 @@ export default function AccountDeletion() {
                     180 days old. They are used only for security and to answer
                     a lawful request (
                     <Link href="/privacy#retention">Privacy §10</Link>).
+                  </dd>
+                </div>
+                <div>
+                  <dt>Earlier versions of edited or unsent messages — 180 days</dt>
+                  <dd>
+                    When you edit or unsend a message, the earlier text or file
+                    is kept for 180 days from that moment, visible only to our
+                    safety team, in case someone reports it. Then it is
+                    destroyed. Deleting your account does not cut this short
+                    or extend it.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Records with no personal detail on them</dt>
+                  <dd>
+                    A few records stay but are kept without your name, phone,
+                    email or photo, pointing only at the emptied account marker:
+                    the record that a host was checked, the call history shown
+                    in the other person’s chat (when it rang, how long it
+                    lasted, with no address), and the credential records of a
+                    Page our team ran. They are kept for as long as that
+                    person’s chat or our safety and legal duties need them.
                   </dd>
                 </div>
                 <div>
@@ -478,17 +528,21 @@ export default function AccountDeletion() {
                 Sign in with Apple is offered on iPhone. When you delete in the
                 app, the app also asks Apple to confirm it is you, with
                 Apple’s usual prompt. With that, we tell Apple to unlink The
-                Club from your Apple Account. If you decline the prompt, your
-                account on The Club is still deleted, but we cannot ask Apple
-                to unlink it.
+                Club from your Apple Account. If you decline the prompt, or you
+                delete from an Android phone where Apple’s prompt does not
+                appear, your account on The Club is still deleted, but we
+                cannot ask Apple to unlink it, so unlink it yourself as
+                described below.
               </p>
               <p>
-                If you ask us by email, we cannot ask Apple to unlink The Club
-                for you. You can always check and remove it yourself: open your
-                Apple Account settings, choose{" "}
-                <strong>Sign in with Apple</strong>, pick{" "}
-                <strong>The Club</strong> and choose{" "}
-                <strong>Stop using Apple Account</strong>. This is separate from
+                If you ask us by email, or the app could not ask Apple, we
+                cannot unlink The Club for you. You can always check and remove
+                it yourself: on your iPhone or iPad open <strong>Settings</strong>,
+                tap your name, tap <strong>Sign in with Apple</strong>, choose{" "}
+                <strong>The Club</strong>, then tap <strong>Delete</strong>
+                (on older versions of iOS the button may read{" "}
+                <strong>Stop Using Apple ID</strong> or{" "}
+                <strong>Stop Using Apple Account</strong>). This is separate from
                 the deletion. Either way, once your account is deleted, we no
                 longer hold your Apple identifier, and the registration copy in{" "}
                 <a href="#kept">§6</a> keeps only the word “apple”.
