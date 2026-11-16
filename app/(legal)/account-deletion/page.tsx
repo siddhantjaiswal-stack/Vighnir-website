@@ -77,9 +77,9 @@ export default function AccountDeletion() {
               <h2>1. Delete in the app</h2>
               <p>
                 You can delete your account yourself inside the app. It works
-                the same whether you signed in with your{" "}
-                <strong>phone number</strong>, your <strong>email</strong>,
-                with <strong>Google</strong> or with <strong>Apple</strong>.
+                the same whichever way you signed in: with your{" "}
+                <strong>phone number</strong>, your <strong>email</strong>,{" "}
+                <strong>Google</strong> or <strong>Apple</strong>.
               </p>
               <ol>
                 <li>
@@ -539,7 +539,7 @@ export default function AccountDeletion() {
                 cannot unlink The Club for you. You can always check and remove
                 it yourself: on your iPhone or iPad open <strong>Settings</strong>,
                 tap your name, tap <strong>Sign in with Apple</strong>, choose{" "}
-                <strong>The Club</strong>, then tap <strong>Delete</strong>
+                <strong>The Club</strong>, then tap <strong>Delete</strong>{" "}
                 (on older versions of iOS the button may read{" "}
                 <strong>Stop Using Apple ID</strong> or{" "}
                 <strong>Stop Using Apple Account</strong>). This is separate from
