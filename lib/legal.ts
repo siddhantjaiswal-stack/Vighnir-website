@@ -45,10 +45,14 @@ export const LEGAL = {
 
   effective: "3 August 2026",
   effectiveIso: "2026-08-03",
-  /** The privacy page alone was revised on this date (rewritten from what the app collects, D-347); terms and account deletion keep the date above. */
-  privacyEffective: "15 November 2026",
-  privacyEffectiveIso: "2026-11-15",
+  /** The privacy page alone was revised on this date (rewritten from what the app collects, D-347; 16 Nov: edited and unsent messages kept 180 days, D-432); terms and account deletion keep the date above. */
+  privacyEffective: "16 November 2026",
+  privacyEffectiveIso: "2026-11-16",
   version: "1.0",
+  /** The account-deletion page alone was revised on this date (in-app deletion and Sign in with Apple are live); privacy and terms keep their own dates. */
+  deletionEffective: "16 November 2026",
+  deletionEffectiveIso: "2026-11-16",
+  deletionVersion: "1.2",
 
   /** See gap 4. Role mailboxes only; never a personal address. */
   privacyEmail: "privacy@vighnir.com",
