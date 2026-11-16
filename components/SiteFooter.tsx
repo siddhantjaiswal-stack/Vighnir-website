@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LEGAL } from "@/lib/legal";
 
 /**
  * The site footer. Shared by the homepage and the legal pages so the legal
@@ -10,14 +11,17 @@ export default function SiteFooter() {
   return (
     <footer>
       <div className="wrap foot mono">
-        <span>© MMXXVI Vighnir</span>
+        <span>© MMXXVI {LEGAL.entity}</span>
         <span>eko · The Club · Aquarius</span>
         <nav className="foot-legal" aria-label="Legal">
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/account-deletion">Delete account</Link>
         </nav>
-        <address style={{ fontStyle: "normal" }}>Registered office: Bareilly, Uttar Pradesh</address>
+        <address style={{ fontStyle: "normal" }}>
+          Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India · CIN {LEGAL.cin} ·{" "}
+          <a href="mailto:hello@vighnir.com">hello@vighnir.com</a>
+        </address>
       </div>
     </footer>
   );
