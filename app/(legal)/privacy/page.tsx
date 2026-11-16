@@ -1436,8 +1436,9 @@ export default function PrivacyPolicy() {
                   <dd>
                     Have inaccurate data corrected, incomplete data completed,
                     outdated data updated, or your data erased. You can delete
-                    your whole account yourself in the app: Settings → Account →
-                    Delete account. A code is sent to your phone. Once you enter
+                    your whole account yourself in the app: Profile → ⋮ →
+                    Settings → Delete account (at the bottom, under Log out).
+                    A code is sent to your phone. Once you enter
                     it you are signed out everywhere and the deletion starts.
                     There is no undo. What deletion cannot reach, and what we must
                     keep, is on{" "}
