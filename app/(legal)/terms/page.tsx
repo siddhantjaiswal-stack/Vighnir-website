@@ -40,7 +40,7 @@ export default function TermsOfService() {
           <div className="legal-meta mono">
             <span>
               Effective{" "}
-              <time dateTime={LEGAL.effectiveIso}>{LEGAL.effective}</time>
+              <time dateTime="2026-11-18">18 November 2026</time>
             </span>
             <span>Version {LEGAL.version}</span>
             <span>India · English</span>
@@ -341,7 +341,7 @@ export default function TermsOfService() {
                   </dd>
                 </div>
                 <div>
-                  <dt>Within 7 days</dt>
+                  <dt>Within 36 hours</dt>
                   <dd>
                     We resolve every other complaint, and tell you what we did.
                   </dd>
