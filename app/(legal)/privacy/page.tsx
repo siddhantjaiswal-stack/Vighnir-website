@@ -938,7 +938,13 @@ export default function PrivacyPolicy() {
                     Relays a call when a direct connection fails. Runs the AI
                     models behind the automated safety checks in{" "}
                     <a href="#collect">§3</a>. Sees requests to our API and the
-                    media you upload.
+                    media you upload. When you ask for a sign-in code, runs an
+                    invisible check (Cloudflare Turnstile) that tells a real phone
+                    from an automated script; the{" "}
+                    <a href="https://www.cloudflare.com/turnstile-privacy-policy/">
+                      Cloudflare Turnstile Privacy Addendum
+                    </a>{" "}
+                    applies to that check.
                   </dd>
                 </div>
                 <div>
