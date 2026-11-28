@@ -175,7 +175,7 @@ export const LANGUAGES = [
 /** GP §1, §3 (sign-up row). */
 export const SIGN_UP = [
   "Sign in with a code sent to your phone or email, or with Google or Apple. There are no passwords.",
-  "Give your date of birth. The Club does not create an account for anyone under 18.",
+  "Give your date of birth. The Club checks it before it creates your account.",
   "Take a short face video so that one person has one account. Only a face code is kept, never the video.",
 ] as const;
 

@@ -3,7 +3,7 @@
  *
  * The files are in public/shots/ (built by scripts/make-shots.mjs from the
  * 28 Nov 2026 captures of the main build running against a private test
- * environment: fictional test accounts, generated sample photos). Each is served as AVIF
+ * environment: fictional test accounts and sample content). Each is served as AVIF
  * or WebP at three widths. Alt text follows the captions written with the
  * captures (room/site-revamp-1128/shots/captions.md).
  */
@@ -64,7 +64,7 @@ export default function Shot({
   caption?: string;
 }) {
   const s = SHOTS[name];
-  const sizes = "(max-width: 899px) 70vw, 240px";
+  const sizes = "240px";
   return (
     <figure className="ill">
       <div className="phone real">
@@ -92,8 +92,8 @@ export default function Shot({
 export function ShotNote() {
   return (
     <p className="muted small shot-note">
-      Screens from a private test build, with fictional test accounts and
-      generated sample photos.
+      Screens from a private test build, with test accounts and sample
+      content.
     </p>
   );
 }

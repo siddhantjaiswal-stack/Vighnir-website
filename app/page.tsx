@@ -22,6 +22,9 @@ const HIGHLIGHTS = [
   { icon: "calendar", name: "One-to-one sessions", text: "Book a paid chat, voice or video session with an approved host, inside the app.", href: "/how-it-works" },
 ] as const;
 
+/** The short answers shown here: what it is, download, free, in person, payments. The age answers live on /faq. */
+const HOME_FAQS = [0, 1, 2, 5, 6].map((i) => FAQS[i]);
+
 export default function Home() {
   return (
     <main>
@@ -57,7 +60,7 @@ export default function Home() {
           </div>
           <div className="hero-phones">
             <Shot name="chat" priority />
-            <Shot name="host-profile" priority />
+            <Shot name="host-profile" />
           </div>
         </div>
       </section>
@@ -207,7 +210,7 @@ export default function Home() {
             <h2 className="h2" id="safety-title">Built so the right people are on it, and the wrong things are not.</h2>
           </div>
           <div className="grid g4">
-            <div className="card"><Icon name="id" /><h3 className="h3">Checked at sign-up</h3><p>Your date of birth is checked when you join, and our database refuses an account that does not meet the rules in our Terms.</p></div>
+            <div className="card"><Icon name="id" /><h3 className="h3">Checked at sign-up</h3><p>Your date of birth is checked when you join, before any account is created.</p></div>
             <div className="card"><Icon name="scan" /><h3 className="h3">One person, one account</h3><p>A short face check at sign-up. We keep a face code, never the video.</p></div>
             <div className="card"><Icon name="shield" /><h3 className="h3">Checked before it is seen</h3><p>Posts, Minis, Stories and profile photos pass automated safety checks before anyone else sees them.</p></div>
             <div className="card"><Icon name="flag" /><h3 className="h3">Report, block, appeal</h3><p>Report anything from inside the app, block anyone, and appeal a decision. Complaints are acknowledged within 24 hours.</p></div>
@@ -263,7 +266,7 @@ export default function Home() {
             <h2 className="h2" id="faq-title">The short answers.</h2>
           </div>
           <div className="faq">
-            {FAQS.slice(0, 5).map((f) => (
+            {HOME_FAQS.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
                 <p>{f.a}</p>
