@@ -96,6 +96,7 @@ export default function Home() {
             <div><dt>Country</dt><dd>India</dd></div>
             <div><dt>Who can join</dt><dd>Adults, 18 and over</dd></div>
             <div><dt>Status</dt><dd>Built, in closed testing</dd></div>
+            <div><dt>Business model</dt><dd>Free to use; a platform fee on paid sessions</dd></div>
             <div><dt>Company</dt><dd>Vighnir (OPC) Private Limited</dd></div>
           </dl>
         </div>
@@ -179,8 +180,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── business model ── */}
+      <section className="section band" aria-labelledby="money-title">
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">Business model</p>
+            <h2 className="h2" id="money-title">Free to use. We earn when a host earns.</h2>
+          </div>
+          <div className="grid g3">
+            <div className="card"><Icon name="users" /><h3 className="h3">Free for everyone</h3><p>Signing up, My Club, posts, Minis, Stories, messages, calls, The Floor and Nearby cost nothing. There is no subscription.</p></div>
+            <div className="card"><Icon name="calendar" /><h3 className="h3">Paid sessions</h3><p>A person books a one-to-one session with a host and pays the host’s all-in price, through Cashfree, a licensed payment company.</p></div>
+            <div className="card"><Icon name="rupee" /><h3 className="h3">One platform fee</h3><p>The Club keeps a platform fee from the host’s earnings when the payout is sent. There are no ads, and we do not sell data.</p></div>
+          </div>
+          <p className="muted small" style={{ marginTop: 20 }}>
+            The Club is in closed testing and has no revenue yet: payments switch on at public launch.{" "}
+            <Link className="text-link" href="/business-model">How The Club makes money</Link>
+          </p>
+        </div>
+      </section>
+
       {/* ── safety ── */}
-      <section className="section band" aria-labelledby="safety-title">
+      <section className="section" aria-labelledby="safety-title">
         <div className="wrap">
           <div className="section-head">
             <p className="eyebrow">Safety and trust</p>
@@ -200,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* ── technology teaser ── */}
-      <section className="section" aria-labelledby="tech-title">
+      <section className="section band" aria-labelledby="tech-title">
         <div className="wrap split rev">
           <div>
             <p className="eyebrow">Technology</p>
@@ -230,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* ── faq teaser ── */}
-      <section className="section band" aria-labelledby="faq-title">
+      <section className="section" aria-labelledby="faq-title">
         <div className="wrap">
           <div className="section-head">
             <p className="eyebrow">Questions</p>

@@ -151,7 +151,7 @@ export default function Safety() {
             <div className="card"><h3 className="h3">Your rights</h3><p>Under the Digital Personal Data Protection Act, 2023 you can access, correct and erase your data, and take back consent. Most of it is in the app’s settings.</p></div>
             <div className="card"><h3 className="h3">Delete any time</h3><p>Delete your account from Settings. Deletion starts within about 20 minutes. <Link className="text-link" href="/account-deletion">What is deleted and what is kept</Link>.</p></div>
             <div className="card"><h3 className="h3">Stored in Mumbai</h3><p>Your account database, your face code and our request logs are in Mumbai, India.</p></div>
-            <div className="card"><h3 className="h3">Stored elsewhere</h3><p>Photos, videos and voice notes are kept in Cloudflare’s storage, live messaging and The Floor run on Cloudflare servers in Asia outside India, and app analytics go to PostHog in the US without your name or contact details.</p></div>
+            <div className="card"><h3 className="h3">Stored elsewhere</h3><p>Photos, videos and voice notes are kept in Cloudflare’s storage, live messaging and The Floor run on Cloudflare servers in Asia outside India, and app analytics, if you switch them on, go to PostHog in the US without your name or contact details.</p></div>
             <div className="card"><h3 className="h3">Every detail</h3><p>The <Link className="text-link" href="/privacy">Privacy Policy</Link> lists everything we collect, why, who processes it, where, and for how long.</p></div>
           </div>
         </div>

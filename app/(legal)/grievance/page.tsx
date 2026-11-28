@@ -100,7 +100,9 @@ export default function Grievance() {
               <h2>3. Our deadlines</h2>
               <p>
                 These are the deadlines in{" "}
-                <Link href="/terms#grievance">§8 of the Terms of Service</Link>:
+                <Link href="/terms#grievance">§8 of the Terms of Service</Link>{" "}
+                and, for court and government orders,{" "}
+                <Link href="/terms#enforcement">§7</Link>:
               </p>
               <dl className="legal-dl">
                 <div>

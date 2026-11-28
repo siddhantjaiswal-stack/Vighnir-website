@@ -56,7 +56,7 @@ export const FEATURES: readonly Feature[] = [
       "Post photos with captions, choose who sees each post, save drafts and share links.",
       "Comment, like and save. A few posts from outside your Club are clearly marked “Suggested”.",
       "There is no boost button and nobody on our team can push a post. “Why am I seeing this” explains every suggestion.",
-      "Turn the personalised feed off, or reset it, from settings.",
+      "Switch the personalised feed on or off, or reset it, in settings.",
     ],
   },
   {

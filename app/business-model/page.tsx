@@ -63,8 +63,7 @@ export default function BusinessModel() {
               <p>
                 The Club has no advertising, no advertising SDK and no
                 advertising ID, and we do not sell your data. Paid sessions are
-                always one-to-one: there are no tips, gifts, paid rooms or paid
-                group sessions, and no paid boost for posts.
+                always one-to-one, and there is no paid boost for posts.
               </p>
               <p>
                 That keeps our interests simple: The Club does well when people

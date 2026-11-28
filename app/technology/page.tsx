@@ -140,7 +140,7 @@ export default function Technology() {
                 <li><strong>Minis</strong> are ranked by a learned model that uses what you watch, finish or skip, and finds similar videos with vector embeddings.</li>
                 <li>A new Mini is first shown to a small group of people who share its language, and reaches more people step by step if they enjoy it.</li>
                 <li>Ranking never uses your phone number, your messages, or your contacts beyond the people you clubbed. There is no paid boost.</li>
-                <li>“Why am I seeing this” explains a suggestion, and you can turn the personalised feed off or reset it.</li>
+                <li>“Why am I seeing this” explains a suggestion, and you can switch the personalised feed on or off, or reset it.</li>
               </ul>
               <p>
                 Read the full explanation in <Link href="/how-ranking-works">How ranking works</Link>.
@@ -150,7 +150,7 @@ export default function Technology() {
           <div className="grid" style={{ gap: 12 }}>
             <div className="card"><h3 className="h3" style={{ marginTop: 0 }}>Signals used</h3><p>Likes, comments, saves, hides, time on screen, finishes and skips on Minis, who you club.</p></div>
             <div className="card"><h3 className="h3" style={{ marginTop: 0 }}>Never used</h3><p>Your phone number, your messages, your contact list beyond who you clubbed, money.</p></div>
-            <div className="card"><h3 className="h3" style={{ marginTop: 0 }}>Your controls</h3><p>Why am I seeing this, personalised feed off, reset my feed, hide a post.</p></div>
+            <div className="card"><h3 className="h3" style={{ marginTop: 0 }}>Your controls</h3><p>Why am I seeing this, personalised feed on or off, reset my feed, hide a post.</p></div>
           </div>
         </div>
       </section>
@@ -192,8 +192,8 @@ export default function Technology() {
               <tbody>
                 <tr><td>MSG91</td><td>Sends sign-in codes by SMS.</td></tr>
                 <tr><td>Zoho ZeptoMail</td><td>Sends sign-in codes and account emails.</td></tr>
-                <tr><td>Sentry</td><td>Crash and error reports, sent through our own relay.</td></tr>
-                <tr><td>PostHog</td><td>Product analytics, without your name, phone number, email or location.</td></tr>
+                <tr><td>Sentry</td><td>Crash reports from the app, only if you switch them on, sent through our own relay.</td></tr>
+                <tr><td>PostHog</td><td>App usage analytics, only if you switch them on, without your name, phone number, email or location.</td></tr>
                 <tr><td>Cashfree</td><td>Payments and host payouts, when paid sessions open.</td></tr>
                 <tr><td>Vercel</td><td>Hosts this website.</td></tr>
               </tbody>

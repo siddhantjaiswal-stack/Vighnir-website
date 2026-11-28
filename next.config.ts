@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
       { source: "/grievance-officer", destination: "/grievance", permanent: true },
       { source: "/help", destination: "/support", permanent: true },
       { source: "/host", destination: "/hosts", permanent: true },
+      // Temporary (307): the content Worker's "Report" link on public share
+      // pages still points at /complaint (ground-site §3a). Until the owner
+      // publishes a complaint page, send it to the grievance page, not a 404.
+      { source: "/complaint", destination: "/grievance", permanent: false },
     ];
   },
 };

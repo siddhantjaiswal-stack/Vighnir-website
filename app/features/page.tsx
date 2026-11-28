@@ -98,7 +98,7 @@ export default function Features() {
           <h2 className="h2" id="controls-title" style={{ marginTop: 12 }}>Settings that actually change something.</h2>
           <div className="grid g3" style={{ marginTop: 28 }}>
             <div className="card"><h3 className="h3">Privacy</h3><p>Mute, restrict or block people, hide tags, control message requests and your activity status.</p></div>
-            <div className="card"><h3 className="h3">Your feed</h3><p>Turn the personalised feed off or reset it. See why any suggested post is shown to you.</p></div>
+            <div className="card"><h3 className="h3">Your feed</h3><p>Switch the personalised feed on or off, or reset it. See why any suggested post is shown to you.</p></div>
             <div className="card"><h3 className="h3">Your data</h3><p>Download your data, use your rights under India’s data protection law, and delete your account from inside the app.</p></div>
             <div className="card"><h3 className="h3">Notifications</h3><p>Choose which push notifications you get and whether they show a preview.</p></div>
             <div className="card"><h3 className="h3">Sharing</h3><p>Share a post or profile as a link, or show your profile QR code.</p></div>
