@@ -1,77 +1,55 @@
-# Vighnir — One house. Three brands.
+# vighnir.com: The Club by Vighnir
 
-Award-style animated site for the Vighnir house (eko · The Club · Aquarius).
-Next.js 15 (App Router) + GSAP ScrollTrigger/SplitText + Lenis smooth scroll.
-Fully static-prerendered, SEO/AEO-complete, Vercel-ready.
+The public website for **The Club**, the social app built and run by Vighnir (OPC) Private Limited.
+Next.js 15 (App Router), React 19, TypeScript. Every page is static HTML (except `/get`, which picks a
+store per device), so the full text is visible to crawlers and with JavaScript off.
 
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev        # http://localhost:3000
+npm run build && npm run start
 ```
 
-## Deploy to Vercel (pick one)
+## Deploy
 
-1. **GitHub (recommended):** push this folder to a repo → vercel.com/new → import → Deploy. Zero config; Vercel auto-detects Next.js.
-2. **CLI:** `npm i -g vercel && vercel` from this folder, then `vercel --prod`.
-3. **Drag & drop is NOT available for Next.js** — use 1 or 2.
+Vercel project `vighnir-website`. **A push to `main` deploys production**; every other branch gets a preview
+deployment (behind Vercel login). Work on a branch; merge only after the preview is approved.
 
-## Before going live — edit `lib/site.ts`
+## Where things live
 
-- `SITE.url` → your real domain (drives canonical URL, sitemap, robots, OG, JSON-LD).
-- `BRANDS[*].href` → each brand's live URL (currently `#`).
-- `SITE.email` if different.
+| What | Where |
+|---|---|
+| Every product claim (features, booking steps, refund bands, FAQ) | `lib/club.ts` (each traced to the app repo; see its header for the rules) |
+| Site constants, main nav, canonical host (`https://www.vighnir.com`) | `lib/site.ts` |
+| Legal entity, CIN, mailboxes, Grievance Officer line, dates | `lib/legal.ts` |
+| Header, footer, screen illustrations, icons | `components/` |
+| Marketing pages | `app/page.tsx`, `app/{features,how-it-works,hosts,safety,technology,business-model,about,contact,faq}` |
+| Legal pages (URLs used by the app and the store listings; never move them) | `app/(legal)/{privacy,terms,account-deletion,support,community-rules,how-ranking-works,host-terms,grievance,refund-policy}` |
+| Alias redirects (`/delete-account`, `/refunds`, ...) | `next.config.ts` |
+| OG image source | `scripts/og.html`, rendered by `scripts/render-og.mjs` |
 
-After deploy, add the domain in Vercel → Settings → Domains.
+Screens on the site are **illustrations drawn in code** (`components/Screens.tsx`): grey bars stand in for
+text so nothing looks like a real person or real data. Replace them with real screenshots only from test
+accounts with tidy test content.
 
-## Analytics (PostHog, cookieless) — D-241
+## Analytics (PostHog, cookieless): D-241
 
 `instrumentation-client.ts` loads `posthog-js` in the browser: page views only, `persistence: "memory"`
 (no cookie, no localStorage), the visitor's IP discarded by the PostHog project setting `anonymize_ips`.
-It is inert unless these two Vercel environment variables are set (Production, and Preview if wanted):
+It is inert unless these two Vercel environment variables are set:
 
 | Variable | Value |
 |---|---|
 | `NEXT_PUBLIC_POSTHOG_KEY` | the project key, starts `phc_` (public by design; it can only write events) |
 | `NEXT_PUBLIC_POSTHOG_HOST` | `https://us.i.posthog.com` |
 
-`NEXT_PUBLIC_*` values are compiled into the bundle at build time, so redeploy after setting them. Never
-put the personal API key (`phx_`) here. The privacy page (§8, §16, §17) names PostHog Inc. (USA) as a processor.
+Vercel Web Analytics and Speed Insights are also on (cookieless). Any new analytics or third-party script must
+be added to Privacy Policy §16 in the same change.
 
-## SEO / AEO — what's included
+## SEO
 
-- Static prerender: full HTML + content for crawlers, no JS needed.
-- Metadata API: title/description/canonical/robots, OpenGraph + Twitter cards with generated `public/og.png` (1200×630).
-- JSON-LD `@graph`: Organization (+ 3 sub-organization brands), WebSite, WebPage, FAQPage — the FAQ schema mirrors the visible Questions section.
-- `robots.txt` + `sitemap.xml` + `manifest.webmanifest` (generated routes).
-- `public/llms.txt` for AI crawlers/answer engines.
-- Self-hosted fonts via `next/font` (preloaded woff2 → fast LCP, no CLS).
-
-## Favicon (the V)
-
-Generated from Libre Caslon Display (the site serif): `favicon.svg`,
-48/96/192/512 PNGs, `apple-touch-icon.png`, `app/favicon.ico`.
-Google's requirements for showing it in search results are met (48px-multiple
-PNGs + ico + svg, stable URLs). Two things Google still needs from you:
-
-1. The site must be **indexed** — verify the domain in Google Search Console
-   and request indexing of the homepage.
-2. Patience — Google refreshes SERP favicons on its own crawl schedule
-   (days to a few weeks after launch).
-
-Regenerate assets anytime: `python3 scripts/gen-assets.py`
-(needs `pip install pillow fonttools` and the three Google-font TTFs in `/tmp/fonts` — see script header).
-
-## Motion system (for future edits)
-
-All choreography lives in `components/Experience.tsx`:
-preloader (skipped on repeat visits via sessionStorage + fully skipped for
-`prefers-reduced-motion`), Lenis inertia scroll, split-text hero with the
-friction strike-through beat, glass header + scroll progress + scrollspy,
-per-row index reveals, cursor-following glass brand previews, velocity-reactive
-marquee, scrubbed word-fill in The House, scramble-in facts, FAQ accordion,
-magnetic glass mail CTA, aurora canvas + film grain.
-
-Content is server-rendered in `app/page.tsx`; the site is fully readable with
-JavaScript disabled (animations simply don't run).
+Metadata API titles and descriptions per page, canonical on `https://www.vighnir.com`, Open Graph and Twitter
+cards (`public/og.png`), JSON-LD (Organization, WebSite, MobileApplication; FAQPage on `/faq`), generated
+`robots.txt`, `sitemap.xml` and `manifest.webmanifest`, and `public/llms.txt`.

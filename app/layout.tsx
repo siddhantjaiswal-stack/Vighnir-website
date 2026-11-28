@@ -1,52 +1,42 @@
 import type { Metadata, Viewport } from "next";
-import { Libre_Caslon_Display, Figtree, Spline_Sans_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { SITE, BRANDS, FAQS } from "@/lib/site";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import JsonLd from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
+import { LEGAL } from "@/lib/legal";
 import "./globals.css";
 
-const serif = Libre_Caslon_Display({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-serif",
-});
-
-const sans = Figtree({
-  weight: ["300", "400", "500", "600"],
+/** Inter is The Club's typeface in the app (shared/ui/typography.ts). Self-hosted at build. */
+const sans = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
-});
-
-const mono = Spline_Sans_Mono({
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default: SITE.title,
-    template: `%s — ${SITE.name}`,
+    template: `%s · The Club by Vighnir`,
   },
   description: SITE.description,
-  applicationName: SITE.name,
-  authors: [{ name: SITE.name, url: SITE.url }],
-  creator: SITE.name,
-  publisher: SITE.name,
+  applicationName: SITE.product,
+  authors: [{ name: LEGAL.entity, url: SITE.url }],
+  creator: LEGAL.entity,
+  publisher: LEGAL.entity,
   keywords: [
+    "The Club app",
+    "The Club India",
+    "social app India",
+    "one-to-one sessions",
+    "book a session with a host",
+    "Minis short videos",
     "Vighnir",
-    "eko AI CRM",
-    "The Club marketplace",
-    "Aquarius hyperlocal advertising",
-    "AI sales automation India",
-    "creator marketplace India",
-    "India startup house",
   ],
-  category: "business",
+  category: "social networking",
   alternates: { canonical: "/" },
   robots: {
     index: true,
@@ -62,16 +52,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE.url,
-    siteName: SITE.name,
+    siteName: "The Club by Vighnir",
     title: SITE.title,
     description: SITE.description,
-    locale: "en_US",
+    locale: "en_IN",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Vighnir — One house. Three ways to remove friction.",
+        alt: "The Club by Vighnir: friends, Minis and one-to-one sessions. A social app for India.",
       },
     ],
   },
@@ -97,21 +87,30 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B0A0F",
+  themeColor: "#07060B",
   colorScheme: "dark",
 };
 
-/** Organization + WebSite + WebPage + FAQPage structured data (SEO + AEO). */
+/**
+ * Organization (the company) + WebSite + MobileApplication (the product).
+ * Only true facts: no rating, no price, no download URL (no store listing is
+ * live yet). Company facts are the MCA-public ones in lib/legal.ts.
+ */
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": `${SITE.url}/#organization`,
-      name: SITE.name,
+      name: "Vighnir",
+      legalName: LEGAL.entity,
       url: SITE.url,
       email: SITE.email,
-      description: SITE.description,
+      foundingDate: "2026-01-17",
+      foundingLocation: { "@type": "Place", name: "Bareilly, Uttar Pradesh, India" },
+      identifier: { "@type": "PropertyValue", propertyID: "CIN", value: LEGAL.cin },
+      description:
+        "Vighnir (OPC) Private Limited is an Indian technology company that builds and runs The Club, a social app for adults in India.",
       logo: {
         "@type": "ImageObject",
         url: `${SITE.url}/icon-512.png`,
@@ -120,51 +119,53 @@ const jsonLd = {
       },
       address: {
         "@type": "PostalAddress",
-        addressLocality: SITE.locality,
+        streetAddress: "199-197 Civil Lines",
+        addressLocality: "Bareilly",
+        postalCode: "243001",
         addressRegion: "Uttar Pradesh",
         addressCountry: "IN",
       },
       contactPoint: {
         "@type": "ContactPoint",
         email: SITE.email,
-        contactType: "partnerships",
+        contactType: "customer support",
+        areaServed: "IN",
+        availableLanguage: "English",
       },
-      brand: BRANDS.map((b) => ({
-        "@type": "Brand",
-        name: b.name,
-        description: `${b.lead} ${b.desc}`,
-      })),
     },
     {
       "@type": "WebSite",
       "@id": `${SITE.url}/#website`,
       url: SITE.url,
-      name: SITE.name,
+      name: "The Club by Vighnir",
       publisher: { "@id": `${SITE.url}/#organization` },
-      inLanguage: "en",
+      about: { "@id": `${SITE.url}/#app` },
+      inLanguage: "en-IN",
     },
     {
-      "@type": "WebPage",
-      "@id": `${SITE.url}/#webpage`,
+      "@type": "MobileApplication",
+      "@id": `${SITE.url}/#app`,
+      name: "The Club",
       url: SITE.url,
-      name: SITE.title,
       description: SITE.description,
-      isPartOf: { "@id": `${SITE.url}/#website` },
-      about: { "@id": `${SITE.url}/#organization` },
-      inLanguage: "en",
-      primaryImageOfPage: {
-        "@type": "ImageObject",
-        url: `${SITE.url}/og.png`,
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${SITE.url}/#faq`,
-      mainEntity: FAQS.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
+      operatingSystem: "iOS, Android",
+      applicationCategory: "SocialNetworkingApplication",
+      inLanguage: "en-IN",
+      countriesSupported: "IN",
+      image: `${SITE.url}/og.png`,
+      author: { "@id": `${SITE.url}/#organization` },
+      publisher: { "@id": `${SITE.url}/#organization` },
+      featureList: [
+        "My Club: a close circle of friends",
+        "Photo posts and a Home feed",
+        "Minis: short vertical videos",
+        "Stories and Highlights",
+        "Daily Moment",
+        "One-to-one messages, voice and video calls",
+        "The Floor: live chat rooms",
+        "Nearby (opt-in, distance in words)",
+        "Paid one-to-one online sessions with approved hosts",
+      ],
     },
   ],
 };
@@ -173,24 +174,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en-IN" className={sans.variable}>
       <body>
-        {/* Runs before first paint: gates animation-hidden states behind .js so
-            content is fully visible to no-JS users and crawlers. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add('js');if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches)document.documentElement.classList.add('fine');`,
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {children}
+        <JsonLd data={jsonLd} />
+        <SiteHeader />
+        <div id="main" tabIndex={-1}>
+          {children}
+        </div>
+        <SiteFooter />
         <Analytics />
         <SpeedInsights />
       </body>

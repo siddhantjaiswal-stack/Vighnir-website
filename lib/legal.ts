@@ -59,7 +59,14 @@ export const LEGAL = {
   grievanceEmail: "grievance@vighnir.com",
   deletionEmail: "privacy@vighnir.com",
 
-  /** See gap 1. The one neutral line the pages show until a person is appointed. */
+  /**
+   * See gap 1. The one neutral line the pages show until a person is appointed.
+   * TODO-OWNER (site revamp 2026-11-28): kept exactly as it was. The owner wants
+   * someone other than himself as Grievance Officer; he names that person (and
+   * confirms grievance@ and privacy@ deliver to a human) before launch. Shown
+   * on /terms §8, /privacy §13, /host-terms, /account-deletion, /support and
+   * /grievance. Never write a name here without the owner's ruling.
+   */
   grievanceOfficerLine: "Grievance Officer: to be named before launch",
 
   /** The registered office, from the certificate of incorporation (docs dropped 2026-08-03). */

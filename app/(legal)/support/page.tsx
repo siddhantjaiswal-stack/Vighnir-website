@@ -29,7 +29,10 @@ export default function Support() {
               <h2>Get help</h2>
               <p>
                 For any question about {LEGAL.product}, write to{" "}
-                <a href="mailto:hello@vighnir.com">hello@vighnir.com</a>.
+                <a href="mailto:hello@vighnir.com">hello@vighnir.com</a>. To
+                report a post, message, profile, host or session, use Report
+                inside the app. See also <Link href="/contact">Contact</Link>{" "}
+                and the <Link href="/faq">FAQ</Link>.
               </p>
             </section>
 
@@ -53,6 +56,10 @@ export default function Support() {
                 .
               </p>
               <p>{LEGAL.grievanceOfficerLine}</p>
+              <p>
+                Our deadlines and how to appeal are on{" "}
+                <Link href="/grievance">Grievance redressal</Link>.
+              </p>
             </section>
 
             <section id="delete">
@@ -67,7 +74,10 @@ export default function Support() {
               <h2>Policies</h2>
               <p>
                 <Link href="/privacy">Privacy Policy</Link> ·{" "}
-                <Link href="/terms">Terms of Service</Link>
+                <Link href="/terms">Terms of Service</Link> ·{" "}
+                <Link href="/community-rules">Community rules</Link> ·{" "}
+                <Link href="/refund-policy">Refund and cancellation</Link> ·{" "}
+                <Link href="/how-ranking-works">How ranking works</Link>
               </p>
             </section>
 
@@ -75,6 +85,9 @@ export default function Support() {
               <h2>Company</h2>
               <p>
                 {LEGAL.product} is operated by {LEGAL.entity} (CIN {LEGAL.cin}).
+                Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar
+                Pradesh, India. Email:{" "}
+                <a href="mailto:hello@vighnir.com">hello@vighnir.com</a>.
               </p>
             </section>
           </div>

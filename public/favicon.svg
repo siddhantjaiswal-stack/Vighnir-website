@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#0B0A0F"/>
-  <rect x="1" y="1" width="510" height="510" rx="95" fill="none" stroke="rgba(237,234,243,0.14)" stroke-width="2"/>
-  <path d="M96 2 H416" stroke="rgba(255,255,255,0.10)" stroke-width="2" stroke-linecap="round"/>
-  <g transform="translate(128.16,383.09) scale(0.37711,-0.37711)">
-    <path d="M571 656Q571 647 567 637L364 95H360L148 674L235 682V690H-15V682L67 674L320 -16H338L583 637Q591 660 601.5 667.5Q612 675 637 677L693 682V690H480V682L541 677Q557 676 564.0 671.0Q571 666 571 656Z" fill="#9D7BFF"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9D7FFA"/><stop offset=".5" stop-color="#7D6EFF"/><stop offset="1" stop-color="#5B4CD7"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34343c"/><stop offset="1" stop-color="#1c1c21"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#b)"/><g transform="translate(8 5) scale(2)" fill="none" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L16.5 8.5H7.5L12 3Z"/><path d="M12 8.5V16"/><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><circle cx="12" cy="21" r="2.5"/></g></svg>

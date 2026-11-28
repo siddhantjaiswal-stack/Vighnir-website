@@ -3,7 +3,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 
-import SiteFooter from "@/components/SiteFooter";
 import { STORE_LINKS, platformFromUserAgent, storeUrlFor } from "@/lib/appStores";
 import "./get.css";
 
@@ -43,23 +42,15 @@ export default async function GetTheClub() {
 
   return (
     <>
-      <header className="site is-solid get-header">
-        <div className="wrap nav">
-          <Link href="/" className="wordmark" aria-label="Vighnir — home">
-            VIGHN<i>I</i>R
-          </Link>
-        </div>
-      </header>
-
       <main className="get">
         <div className="wrap get-wrap">
           <p className="mono get-eyebrow">The Club</p>
           <h1>Not on the stores yet.</h1>
           <p className="get-lede">
-            Someone sent you a link to something on The Club. The app is still
-            being built, so there is nothing to install today — and we would
-            rather tell you that than send you to a store page that does not
-            exist.
+            The Club is built and in closed testing in India. It is not on the
+            App Store or Google Play yet, so there is nothing to install today,
+            and we would rather tell you that than send you to a store page
+            that does not exist. It will be on both stores at public launch.
           </p>
 
           {anyStoreLive ? (
@@ -83,13 +74,12 @@ export default async function GetTheClub() {
           </p>
 
           <p className="get-back">
-            In the meantime, <Link href="/">read about the house</Link> that is
-            building it.
+            In the meantime, <Link href="/features">see what The Club does</Link>{" "}
+            or <Link href="/contact">write to us</Link>.
           </p>
         </div>
       </main>
 
-      <SiteFooter />
     </>
   );
 }
