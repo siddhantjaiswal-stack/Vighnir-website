@@ -87,7 +87,7 @@ export default function HowItWorks() {
             <div className="prose">
               <ul>
                 <li>Sessions are 30, 60 or 90 minutes, by chat, voice or video. There are no extensions: more time is a new booking.</li>
-                <li>The session opens 5 minutes before the start time. The booking chat has a timer.</li>
+                <li>By default the session opens 5 minutes before the start time. The booking chat has a timer.</li>
                 <li><strong>Voice and video sessions are recorded.</strong> Both people agree to this when booking, and a “Recording” marker shows the whole time.</li>
                 <li>Only our safety team can open a recording, only when someone reports the session or opens a dispute, and every opening is logged. Recordings are deleted 30 days after the session.</li>
                 <li>Photos, videos and voice notes sent in a booking chat are safety-scanned. Text gets a word check, and everything can be reported.</li>
@@ -106,7 +106,7 @@ export default function HowItWorks() {
           <p className="eyebrow">Cancellations and refunds</p>
           <h2 className="h2" id="refunds-title" style={{ marginTop: 12 }}>Clear rules, shown before you book.</h2>
           <p className="lede">
-            These are the default rules. The app shows the rules that apply to
+            These are the default rules, as are the time limits on this page. The app shows the rules that apply to
             each booking before it is accepted.
           </p>
           <div className="table-wrap">

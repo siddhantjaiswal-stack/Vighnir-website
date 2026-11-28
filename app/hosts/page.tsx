@@ -107,7 +107,7 @@ export default function Hosts() {
             <div className="card">
               <Icon name="calendar" />
               <h3 className="h3">Payouts</h3>
-              <p>Clients pay Cashfree, a licensed payment company. Your share is held until the session ends and the 72-hour dispute window closes, then paid to the account you set up with Cashfree.</p>
+              <p>Clients pay Cashfree, a licensed payment company. Your share is held until the session ends and the dispute window (72 hours by default) closes, then paid to the account you set up with Cashfree.</p>
             </div>
           </div>
           <div className="note">

@@ -134,7 +134,7 @@ export default function Home() {
             <h2 className="h2" id="how-title">Request, pay one price, meet in the app.</h2>
             <ol className="steps" style={{ marginTop: 28 }}>
               <li><b>Find a host</b><p>By category and language, or in Nearby.</p></li>
-              <li><b>Send a request</b><p>Chat, voice or video; 30, 60 or 90 minutes. The host has 12 hours to accept.</p></li>
+              <li><b>Send a request</b><p>Chat, voice or video; 30, 60 or 90 minutes. By default the host has 12 hours to accept.</p></li>
               <li><b>Pay one all-in price</b><p>Through Cashfree, a licensed payment company. Payments switch on at public launch.</p></li>
               <li><b>Meet inside The Club</b><p>Voice and video sessions are recorded for safety, with a marker on screen the whole time.</p></li>
             </ol>

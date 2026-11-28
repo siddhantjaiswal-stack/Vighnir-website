@@ -97,7 +97,7 @@ main{position:relative;z-index:1}
 .menu-panel a:hover{background:rgba(255,255,255,.06)}
 .menu-panel .btn{margin-top:8px;justify-content:center}
 @media (max-width:1079px){
-  .nav,.hdr-cta .btn{display:none}
+  .nav,.hdr-cta > .btn{display:none}
   .menu{display:block}
 }
 

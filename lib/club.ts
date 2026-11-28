@@ -86,7 +86,7 @@ export const FEATURES: readonly Feature[] = [
     lead: "Once a day, a short window to show your Club what you are doing right now.",
     points: [
       "The time is different for each person, and the window lasts a few minutes.",
-      "The photo uses the back and the front camera together.",
+      "You take one photo with the back camera and one with the front.",
       "Only your Club sees it, and you see your friends’ Moments after you post yours.",
     ],
   },
@@ -190,7 +190,7 @@ export const BOOKING_STEPS = [
   },
   {
     title: "Send a request",
-    body: "Pick chat, voice or video, a length (30, 60 or 90 minutes) and a time. The host has 12 hours to accept.",
+    body: "Pick chat, voice or video, a length (30, 60 or 90 minutes) and a time. By default the host has 12 hours to accept.",
   },
   {
     title: "Pay one all-in price",
@@ -198,7 +198,7 @@ export const BOOKING_STEPS = [
   },
   {
     title: "Meet in the app",
-    body: "The booking has its own chat with a timer, and reminders 60 and 10 minutes before. The session opens 5 minutes early. Voice and video sessions are recorded for safety, and a marker shows the whole time.",
+    body: "The booking has its own chat with a timer and, by default, reminders 60 and 10 minutes before; the session opens 5 minutes early. Voice and video sessions are recorded for safety, and a marker shows the whole time.",
   },
   {
     title: "Rate it",

@@ -47,7 +47,7 @@ export default function BusinessModel() {
           <ol className="pipeline" style={{ marginTop: 32 }}>
             <li><b>Client pays</b><span>One all-in price on the payment page of Cashfree, a licensed payment company.</span></li>
             <li><b>Held</b><span>Cashfree holds the host’s share while the session happens.</span></li>
-            <li><b>Session ends</b><span>The 72-hour dispute window opens. Refunds that are due come out of the held share.</span></li>
+            <li><b>Session ends</b><span>The dispute window opens (72 hours by default). Refunds that are due come out of the held share.</span></li>
             <li><b>Payout</b><span>Cashfree pays the host’s share to the account the host set up with them.</span></li>
             <li><b>Fee</b><span>The Club’s platform fee is deducted when the payout is sent.</span></li>
           </ol>
