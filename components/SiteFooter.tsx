@@ -1,27 +1,91 @@
 import Link from "next/link";
+import ClubMark from "@/components/ClubMark";
 import { LEGAL } from "@/lib/legal";
+import { SITE } from "@/lib/site";
 
 /**
- * The site footer. Shared by the homepage and the legal pages so the legal
- * links exist on every route — Google requires the privacy policy to be linked
- * from the homepage of the domain that hosts it, and the IT Rules 2021 require
- * the rules, privacy policy and user agreement to be "prominently published".
+ * The site footer, on every page. It carries the legal links on every route:
+ * the IT Rules 2021 (rule 3(1)(a), 3(2)(a)) ask for the rules, privacy policy,
+ * user agreement and grievance details to be one click from the home page, and
+ * Google asks for the privacy policy to be linked from the home page.
  */
+const COLS = [
+  {
+    title: "The Club",
+    links: [
+      ["/features", "Features"],
+      ["/how-it-works", "How it works"],
+      ["/hosts", "For hosts"],
+      ["/safety", "Safety and trust"],
+      ["/technology", "Technology"],
+      ["/business-model", "Business model"],
+      ["/faq", "FAQ"],
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      ["/about", "About Vighnir"],
+      ["/contact", "Contact"],
+      ["/support", "Support"],
+      ["/grievance", "Grievance redressal"],
+      ["/get", "Get the app"],
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      ["/privacy", "Privacy Policy"],
+      ["/terms", "Terms of Service"],
+      ["/community-rules", "Community rules"],
+      ["/child-safety", "Child safety standards"],
+      ["/refund-policy", "Refund and cancellation"],
+      ["/how-ranking-works", "How ranking works"],
+      ["/account-deletion", "Delete your account"],
+    ],
+  },
+] as const;
+
 export default function SiteFooter() {
   return (
-    <footer>
-      <div className="wrap foot mono">
-        <span>© MMXXVI {LEGAL.entity}</span>
-        <span>eko · The Club · Aquarius</span>
-        <nav className="foot-legal" aria-label="Legal">
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/account-deletion">Delete account</Link>
-        </nav>
-        <address style={{ fontStyle: "normal" }}>
-          Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India · CIN {LEGAL.cin} ·{" "}
-          <a href="mailto:hello@vighnir.com">hello@vighnir.com</a>
-        </address>
+    <footer className="ftr">
+      <div className="wrap">
+        <div className="ftr-grid">
+          <div className="ftr-about">
+            <Link href="/" className="logo" aria-label="The Club by Vighnir, home">
+              <ClubMark id="ftr-mark" />
+              <span>
+                The Club <small>by Vighnir</small>
+              </span>
+            </Link>
+            <p>
+              A social app for adults in India: friends, Minis, messages, live
+              rooms and one-to-one sessions with approved hosts. In closed
+              testing.
+            </p>
+          </div>
+          {COLS.map((c) => (
+            <nav key={c.title} aria-label={c.title}>
+              <h2>{c.title}</h2>
+              <ul>
+                {c.links.map(([href, label]) => (
+                  <li key={href}>
+                    <Link href={href}>{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+
+        <div className="ftr-co">
+          <span>© 2026 {LEGAL.entity}. The Club is a product of {LEGAL.entity}.</span>
+          <address>
+            Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar
+            Pradesh, India · CIN {LEGAL.cin} ·{" "}
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          </address>
+        </div>
       </div>
     </footer>
   );

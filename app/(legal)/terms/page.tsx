@@ -40,9 +40,9 @@ export default function TermsOfService() {
           <div className="legal-meta mono">
             <span>
               Effective{" "}
-              <time dateTime="2026-11-18">18 November 2026</time>
+              <time dateTime="2026-11-28">28 November 2026</time>
             </span>
-            <span>Version {LEGAL.version}</span>
+            <span>Version 1.1</span>
             <span>India · English</span>
           </div>
         </div>
@@ -91,16 +91,20 @@ export default function TermsOfService() {
             <section id="what">
               <h2>2. What The Club is</h2>
               <p>
-                The Club is a social app for India. It is being built so that
-                people can share things they make, message each other, and book
-                time with experts and creators.
+                The Club is a social app for India. People use it to share
+                things they make, message each other, and book time with
+                experts and creators.
               </p>
               <div className="legal-note glass">
                 <span className="mono">What exists on the effective date</span>
                 <p>
                   The Club has <strong>not yet been released</strong> on the App
-                  Store or Google Play. The part of it that is built is{" "}
-                  <strong>creating an account and signing in</strong>. These
+                  Store or Google Play. It is in <strong>closed testing</strong>{" "}
+                  in India: testers can create an account, post photos, Minis
+                  and Stories, message and call, use The Floor and Nearby, apply
+                  to host, and request bookings with hosts.{" "}
+                  <strong>Payments are not switched on</strong>, so no one can
+                  pay for a booking (see <a href="#payments">§10</a>). These
                   terms are written to govern the service as a whole, including
                   the parts that arrive later — but we are not going to describe
                   features as if you can use them today.

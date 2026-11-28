@@ -586,15 +586,9 @@ export default function AccountDeletion() {
               <h2>9. Contact and complaints</h2>
               <div className="legal-contact">
                 <span>
-                  <b>Deletion requests and privacy questions:</b>{" "}
-                  <a href={`mailto:${LEGAL.deletionEmail}`}>
-                    {LEGAL.deletionEmail}
-                  </a>
-                </span>
-                <span>
-                  <b>Complaints and grievances:</b>{" "}
-                  <a href={`mailto:${LEGAL.grievanceEmail}`}>
-                    {LEGAL.grievanceEmail}
+                  <b>Deletion requests, privacy questions, complaints and grievances:</b>{" "}
+                  <a href={`mailto:${LEGAL.contactEmail}`}>
+                    {LEGAL.contactEmail}
                   </a>
                 </span>
                 <span>{LEGAL.grievanceOfficerLine}</span>
@@ -608,8 +602,8 @@ export default function AccountDeletion() {
               </div>
               <p>
                 If you are unhappy with how we handled a deletion request, write
-                to the grievance address above. We acknowledge a grievance
-                within 24 hours and resolve it within 7 days. How to escalate
+                to the address above. We acknowledge a grievance
+                within 24 hours and resolve it within 36 hours. How to escalate
                 further, including to the Data Protection Board of India, is in
                 the <Link href="/privacy#grievance">Privacy Policy</Link>.
               </p>

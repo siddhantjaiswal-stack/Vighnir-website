@@ -1,28 +1,30 @@
-# Vighnir
+# The Club by Vighnir
 
-> Vighnir is a company in India that builds The Club, with eko and Aquarius as
-> early-stage projects. The name comes from Sanskrit "vighna"
-> (obstacle); a vighnir is the one who clears it. Every Vighnir brand removes a
-> specific kind of friction, profitably.
+> The Club is a social app for adults in India, for iPhone and Android, built
+> and run by Vighnir (OPC) Private Limited. People keep a close circle of
+> friends (My Club), post photos, Minis (short vertical videos) and Stories,
+> message and call each other, join live chat rooms on The Floor, and book paid
+> one-to-one online sessions (chat, voice or video) with hosts approved after an
+> ID and selfie check. The Club is built and in closed testing in India; it is
+> not yet on the App Store or Google Play, and payments are not switched on yet.
 
-## Brands
+## Pages
 
-- **eko** (AI · Sales automation): The AI CRM that qualifies before you dial.
-  eko calls and scores every inbound lead — hot, warm, cold — schedules
-  meetings, and hands only qualified conversations to sales teams. An
-  early-stage project.
-- **The Club** (Marketplace · Creators): Book time with the people worth
-  talking to. Experts and creators open their calendars; anyone can book a
-  paid, verified one-on-one session. Discovery, scheduling, payment, and
-  safety in one place.
-- **Aquarius** (Media · Hyperlocal branding): Your brand, on every table in
-  the neighbourhood. Water bottles as ad space — cafés get free branded
-  bottles, local businesses get placement directly in customers' hands.
-  An early-stage project.
+- [Features](https://www.vighnir.com/features): every feature of the app
+- [How it works](https://www.vighnir.com/how-it-works): booking, payment, sessions, refunds
+- [For hosts](https://www.vighnir.com/hosts): categories, verification, earnings and the fee
+- [Safety and trust](https://www.vighnir.com/safety): adults only, face check, moderation, reporting
+- [Technology](https://www.vighnir.com/technology): architecture, video pipeline, recommendations
+- [Business model](https://www.vighnir.com/business-model): a platform fee on paid sessions; no ads
+- [About](https://www.vighnir.com/about): the company, the team and the roadmap
+- [FAQ](https://www.vighnir.com/faq)
+- [Privacy Policy](https://www.vighnir.com/privacy), [Terms of Service](https://www.vighnir.com/terms), [Community rules](https://www.vighnir.com/community-rules), [Child safety standards](https://www.vighnir.com/child-safety), [Grievance redressal](https://www.vighnir.com/grievance)
 
 ## Facts
 
-- Registered office: Bareilly, Uttar Pradesh, India
-- Structure: one company, three brands
-- Stage: early-stage
+- Company: Vighnir (OPC) Private Limited, CIN U62099UP2026OPC241657, incorporated 17 January 2026
+- Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India
+- Name: from Sanskrit "vighna" (obstacle); a vighnir is the one who clears it
+- Who can join: adults, 18 and over
+- How it makes money: a platform fee taken from hosts' earnings on paid sessions; no ads, no selling data
 - Contact: hello@vighnir.com
