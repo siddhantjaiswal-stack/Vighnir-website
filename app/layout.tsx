@@ -110,7 +110,7 @@ const jsonLd = {
       foundingLocation: { "@type": "Place", name: "Bareilly, Uttar Pradesh, India" },
       identifier: { "@type": "PropertyValue", propertyID: "CIN", value: LEGAL.cin },
       description:
-        "Vighnir (OPC) Private Limited is an Indian technology company that builds and runs The Club, a social app for adults in India.",
+        "Vighnir (OPC) Private Limited is an Indian technology company that builds and runs The Club, a social app for people in India.",
       logo: {
         "@type": "ImageObject",
         url: `${SITE.url}/icon-512.png`,

@@ -49,7 +49,7 @@ export default function About() {
           <div>
             <p className="eyebrow">Mission</p>
             <h2 className="h2" id="mission-title" style={{ marginTop: 12 }}>
-              Make it easy to learn from someone a few steps ahead of you.
+              Help young adults in India find their people, and learn from the ones a step ahead, safely.
             </h2>
             <div className="prose">
               <p>
@@ -63,10 +63,10 @@ export default function About() {
                 day: a social app built around a close circle of friends, with
                 safe, paid one-to-one sessions with approved hosts inside it.
               </p>
-              <p>
-                <strong>The name.</strong> “Vighna” is Sanskrit for an obstacle.
-                A vighnir is the one who clears it.
-              </p>
+              <div className="note">
+                <b>Vision</b>
+                <p>The place young India goes to be with its people, every day.</p>
+              </div>
             </div>
           </div>
           <div>
@@ -91,7 +91,7 @@ export default function About() {
           <h2 className="h2" id="team-title" style={{ marginTop: 12 }}>A small, founder-led team in India.</h2>
           <div className="prose">
             <p>
-              <strong>Shubham Pal</strong> is a Director of {LEGAL.entity}.
+              <strong>Shubham Pal</strong>, Founder and Director
             </p>
             <p>
               Vighnir is founder-led and based in India. The team designs and

@@ -14,7 +14,7 @@ export const SITE = {
   company: "Vighnir",
   title: "The Club by Vighnir: friends, Minis and one-to-one sessions",
   description:
-    "The Club is a social app for adults in India: keep a close circle of friends, post photos, Minis and Stories, message and call, join live chat rooms, and book paid one-to-one online sessions with approved hosts. Built by Vighnir (OPC) Private Limited. In closed testing.",
+    "The Club is a social app for people in India: keep a close circle of friends, post photos, Minis and Stories, message and call, join live chat rooms, and book paid one-to-one online sessions with approved hosts. Built by Vighnir (OPC) Private Limited. In closed testing.",
   /** The one public mailbox confirmed as the company inbox (ground-site §4). */
   email: "hello@vighnir.com",
   locality: "Bareilly",

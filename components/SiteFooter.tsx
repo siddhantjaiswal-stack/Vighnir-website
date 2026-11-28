@@ -59,7 +59,7 @@ export default function SiteFooter() {
               </span>
             </Link>
             <p>
-              A social app for adults in India: friends, Minis, messages, live
+              A social app for people in India: friends, Minis, messages, live
               rooms and one-to-one sessions with approved hosts. In closed
               testing.
             </p>

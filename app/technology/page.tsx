@@ -81,7 +81,7 @@ export default function Technology() {
             they read or write anything.
           </p>
           <figure style={{ marginTop: 36 }}>
-            <div className="arch" role="img" aria-label="Architecture diagram: the app on your phone talks to Workers and Durable Objects on Cloudflare's edge network, which use R2 storage, Queues and Containers, Workers AI and Vectorize, and reach the Aurora PostgreSQL database and the face check in Mumbai.">
+            <div className="arch" role="img" aria-label="Architecture diagram: the app on your phone talks to Workers and Durable Objects on Cloudflare’s edge network, which use R2 storage, Queues and Containers, Workers AI and Vectorize, and reach the Aurora PostgreSQL database and the face check in Mumbai.">
               {LAYERS.map((l, i) => (
                 <div key={l.name} style={{ display: "contents" }}>
                   {i > 0 ? <div className="arch-arrow" aria-hidden="true">↓</div> : null}
@@ -174,7 +174,7 @@ export default function Technology() {
           <div className="grid g3" style={{ marginTop: 28 }}>
             <div className="card"><h3 className="h3">Encrypted in transit</h3><p>Everything travels over HTTPS and TLS, including the sound and picture of a relayed call.</p></div>
             <div className="card"><h3 className="h3">No passwords</h3><p>One-time codes expire in minutes and allow only a few attempts. Sign-in tokens are stored hashed and rotate on every use.</p></div>
-            <div className="card"><h3 className="h3">Server-side rules</h3><p>The 18+ check, who may call whom, and every other rule that matters is enforced by our servers, not the app.</p></div>
+            <div className="card"><h3 className="h3">Server-side rules</h3><p>The date-of-birth check, who may call whom, and every other rule that matters is enforced by our servers, not the app.</p></div>
             <div className="card"><h3 className="h3">Logged access</h3><p>Staff tools sit behind Cloudflare Access, and every time staff open a private message it is written to a log that cannot be changed.</p></div>
             <div className="card"><h3 className="h3">Payment details stay with Cashfree</h3><p>Full PAN, bank account and UPI numbers for host payouts go to Cashfree in one request. We do not store them.</p></div>
             <div className="card"><h3 className="h3">What we do not claim</h3><p>We hold no security certification, and we do not describe our messages as end-to-end encrypted.</p></div>
@@ -195,6 +195,7 @@ export default function Technology() {
                 <tr><td>Sentry</td><td>Crash reports from the app, only if you switch them on, sent through our own relay.</td></tr>
                 <tr><td>PostHog</td><td>App usage analytics, only if you switch them on, without your name, phone number, email or location.</td></tr>
                 <tr><td>Cashfree</td><td>Payments and host payouts, when paid sessions open.</td></tr>
+                <tr><td>Google (Firebase and Play)</td><td>Firebase Cloud Messaging delivers Android notifications, Sign in with Google is one of the sign-in options, and Play Integrity checks that the Android app is genuine.</td></tr>
                 <tr><td>Vercel</td><td>Hosts this website.</td></tr>
               </tbody>
             </table>
