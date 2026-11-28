@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Phone from "@/components/Screens";
+import Shot, { ShotNote } from "@/components/Shot";
 import Icon from "@/components/Icon";
 import CtaBand from "@/components/CtaBand";
 import { FAQS, STATUS } from "@/lib/club";
@@ -33,7 +34,7 @@ export default function Home() {
               Your friends, your Minis, and <em>time with people who know their stuff.</em>
             </h1>
             <p className="lede">
-              The Club is a social app for adults in India. Keep a close circle
+              The Club is a social app for people in India. Keep a close circle
               of friends, post photos, Minis and Stories, message and call, join
               live chat rooms, and book a paid one-to-one session with an
               approved host when you want help from someone who has done it.
@@ -55,8 +56,8 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-phones">
-            <Phone kind="feed" caption="Home, with your Club’s posts" />
-            <Phone kind="host" caption="A host’s page" />
+            <Shot name="chat" priority />
+            <Shot name="host-profile" priority />
           </div>
         </div>
       </section>
@@ -85,8 +86,8 @@ export default function Home() {
                 in-person meetings.
               </p>
               <p>
-                <strong>Who it is for:</strong> adults in India, starting with
-                college students and young people early in their careers.
+                <strong>Who it is for:</strong> young people in India, starting with
+                college students and those early in their careers.
               </p>
             </div>
           </div>
@@ -94,7 +95,6 @@ export default function Home() {
             <div><dt>Product</dt><dd>The Club, a mobile app</dd></div>
             <div><dt>Platforms</dt><dd>iPhone and Android</dd></div>
             <div><dt>Country</dt><dd>India</dd></div>
-            <div><dt>Who can join</dt><dd>Adults, 18 and over</dd></div>
             <div><dt>Status</dt><dd>Built, in closed testing</dd></div>
             <div><dt>Business model</dt><dd>Free to use; a platform fee on paid sessions</dd></div>
             <div><dt>Company</dt><dd>Vighnir (OPC) Private Limited</dd></div>
@@ -157,7 +157,7 @@ export default function Home() {
             <h2 className="h2" id="hosts-title">Teach what you know. Set your own prices.</h2>
             <div className="prose">
               <p>
-                Any adult on The Club can apply to host in up to three of ten
+                Any member of The Club can apply to host in up to three of ten
                 categories: careers, study help, languages, fitness, cooking,
                 music lessons, tech help, creator tips, astrology, and talk and
                 listen (non-clinical).
@@ -207,11 +207,17 @@ export default function Home() {
             <h2 className="h2" id="safety-title">Built so the right people are on it, and the wrong things are not.</h2>
           </div>
           <div className="grid g4">
-            <div className="card"><Icon name="id" /><h3 className="h3">Adults only</h3><p>Your date of birth is checked at sign-up, and the database refuses an account for anyone under 18.</p></div>
+            <div className="card"><Icon name="id" /><h3 className="h3">Checked at sign-up</h3><p>Your date of birth is checked when you join, and our database refuses an account that does not meet the rules in our Terms.</p></div>
             <div className="card"><Icon name="scan" /><h3 className="h3">One person, one account</h3><p>A short face check at sign-up. We keep a face code, never the video.</p></div>
             <div className="card"><Icon name="shield" /><h3 className="h3">Checked before it is seen</h3><p>Posts, Minis, Stories and profile photos pass automated safety checks before anyone else sees them.</p></div>
             <div className="card"><Icon name="flag" /><h3 className="h3">Report, block, appeal</h3><p>Report anything from inside the app, block anyone, and appeal a decision. Complaints are acknowledged within 24 hours.</p></div>
           </div>
+          <div className="shot-row">
+            <Shot name="consent" />
+            <Shot name="privacy" />
+            <Shot name="settings" />
+          </div>
+          <ShotNote />
           <div className="btn-row">
             <Link href="/safety" className="btn btn-ghost">How we keep The Club safe</Link>
             <Link href="/grievance" className="btn btn-ghost">Grievance redressal</Link>

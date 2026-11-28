@@ -1,6 +1,6 @@
 # The Club by Vighnir
 
-> The Club is a social app for adults in India, for iPhone and Android, built
+> The Club is a social app for people in India, for iPhone and Android, built
 > and run by Vighnir (OPC) Private Limited. People keep a close circle of
 > friends (My Club), post photos, Minis (short vertical videos) and Stories,
 > message and call each other, join live chat rooms on The Floor, and book paid
@@ -13,7 +13,7 @@
 - [Features](https://www.vighnir.com/features): every feature of the app
 - [How it works](https://www.vighnir.com/how-it-works): booking, payment, sessions, refunds
 - [For hosts](https://www.vighnir.com/hosts): categories, verification, earnings and the fee
-- [Safety and trust](https://www.vighnir.com/safety): adults only, face check, moderation, reporting
+- [Safety and trust](https://www.vighnir.com/safety): date-of-birth check, face check, moderation, reporting
 - [Technology](https://www.vighnir.com/technology): architecture, video pipeline, recommendations
 - [Business model](https://www.vighnir.com/business-model): a platform fee on paid sessions; no ads
 - [About](https://www.vighnir.com/about): the company, the team and the roadmap
@@ -24,7 +24,5 @@
 
 - Company: Vighnir (OPC) Private Limited, CIN U62099UP2026OPC241657, incorporated 17 January 2026
 - Registered office: 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India
-- Name: from Sanskrit "vighna" (obstacle); a vighnir is the one who clears it
-- Who can join: adults, 18 and over
 - How it makes money: a platform fee taken from hosts' earnings on paid sessions; no ads, no selling data
 - Contact: hello@vighnir.com

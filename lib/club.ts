@@ -220,7 +220,7 @@ export const CANCELLATION = [
 export const HOST_STEPS = [
   {
     title: "Apply in the app",
-    body: "Any adult on The Club can apply. Choose up to three categories, the languages you speak, and your prices for chat, voice and video.",
+    body: "Any member of The Club can apply. Choose up to three categories, the languages you speak, and your prices for chat, voice and video.",
   },
   {
     title: "Verify who you are",
@@ -249,7 +249,7 @@ export type Faq = { q: string; a: string };
 export const FAQS: readonly Faq[] = [
   {
     q: "What is The Club?",
-    a: "The Club is a social app for adults in India. You keep a close circle of friends called My Club, post photos, Minis and Stories, message and call, join live chat rooms on The Floor, and book paid one-to-one online sessions with approved hosts. It is built by Vighnir (OPC) Private Limited.",
+    a: "The Club is a social app for people in India. You keep a close circle of friends called My Club, post photos, Minis and Stories, message and call, join live chat rooms on The Floor, and book paid one-to-one online sessions with approved hosts. It is built by Vighnir (OPC) Private Limited.",
   },
   {
     q: "Can I download it today?",

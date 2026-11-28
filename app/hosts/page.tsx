@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import Phone from "@/components/Screens";
+import Shot, { ShotNote } from "@/components/Shot";
 import Icon from "@/components/Icon";
 import CtaBand from "@/components/CtaBand";
 import { CATEGORIES, HOST_STEPS, LANGUAGES } from "@/lib/club";
@@ -19,7 +19,7 @@ export default function Hosts() {
       <PageHero
         eyebrow="For hosts"
         title="Share what you know, one person at a time."
-        lede="Hosts are adults who offer paid one-to-one sessions by chat, voice or video, inside The Club. You choose what you offer, when, and for how much."
+        lede="Hosts are people who offer paid one-to-one sessions by chat, voice or video, inside The Club. You choose what you offer, when, and for how much."
       >
         <div className="btn-row">
           <a href="#apply" className="btn btn-primary">How to become a host</a>
@@ -51,8 +51,9 @@ export default function Hosts() {
               </p>
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Phone kind="host" caption="A host’s page" />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <Shot name="host-profile" />
+            <ShotNote />
           </div>
         </div>
       </section>

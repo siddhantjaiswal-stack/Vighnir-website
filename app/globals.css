@@ -270,6 +270,12 @@ table.rules{width:100%;border-collapse:collapse;font-size:.95rem}
 .stories{display:flex;gap:8px}
 .cap{margin-top:12px;text-align:center;color:var(--faint);font-size:.78rem}
 figure.ill{display:flex;flex-direction:column;align-items:center}
+/* real screenshots: the capture already carries its own status bar and island */
+.phone.real{aspect-ratio:auto}
+.phone.real .phone-screen::before{display:none}
+.phone.real img{display:block;width:100%;height:auto}
+.shot-row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,3vw,36px);margin-top:36px}
+.shot-note{text-align:center;margin-top:18px}
 
 /* ───────────────────────── architecture diagram ── */
 .arch{display:grid;gap:12px}

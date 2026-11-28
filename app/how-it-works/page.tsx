@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Phone from "@/components/Screens";
+import Shot, { ShotNote } from "@/components/Shot";
 import CtaBand from "@/components/CtaBand";
 import { BOOKING_STEPS, CANCELLATION, HOST_STEPS } from "@/lib/club";
 
@@ -33,7 +34,7 @@ export default function HowItWorks() {
           <p className="eyebrow">For members</p>
           <h2 className="h2" id="members-title" style={{ marginTop: 12 }}>Join, build your Club, share.</h2>
           <ol className="steps" style={{ marginTop: 28, maxWidth: 860 }}>
-            <li><b>Sign up</b><p>Use a code sent to your phone or email, or Google or Apple. Give your date of birth (The Club is for adults), and take a short face check so one person has one account.</p></li>
+            <li><b>Sign up</b><p>Use a code sent to your phone or email, or Google or Apple. Give your date of birth, and take a short face check so one person has one account.</p></li>
             <li><b>Build your Club</b><p>Club the people you know. When they club you back, you are in each other’s Club and see each other’s posts on Home.</p></li>
             <li><b>Post and watch</b><p>Share photos, Minis and Stories with the audience you choose: My Club, Close Friends, or more people. Everything is safety-checked before others see it.</p></li>
             <li><b>Talk</b><p>Message and call people in your Club, or drop into a live room on The Floor.</p></li>
@@ -52,8 +53,9 @@ export default function HowItWorks() {
               ))}
             </ol>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Phone kind="host" caption="Choosing chat, voice or video" />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <Shot name="host-profile" caption="Choosing chat, voice or video" />
+            <ShotNote />
           </div>
         </div>
       </section>

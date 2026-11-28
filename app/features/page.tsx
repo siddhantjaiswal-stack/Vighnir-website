@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Phone from "@/components/Screens";
+import Shot, { ShotNote, type ShotName } from "@/components/Shot";
 import CtaBand from "@/components/CtaBand";
 import { FEATURES, SIGN_UP } from "@/lib/club";
 
@@ -13,15 +14,16 @@ export const metadata: Metadata = {
 };
 
 /** Which illustration goes with which feature (only where one says something). */
-const ART: Record<string, { kind: Parameters<typeof Phone>[0]["kind"]; caption: string }> = {
+type Art = { kind: Parameters<typeof Phone>[0]["kind"]; caption: string; shot?: ShotName };
+const ART: Record<string, Art> = {
   home: { kind: "feed", caption: "Home, with your Club first" },
   minis: { kind: "minis", caption: "A Mini" },
   stories: { kind: "stories", caption: "A story for Close Friends" },
   moment: { kind: "moment", caption: "Daily Moment, back and front camera" },
-  messages: { kind: "messages", caption: "A one-to-one chat" },
+  messages: { kind: "messages", caption: "A one-to-one chat", shot: "chat" },
   floor: { kind: "floor", caption: "An anonymous room on The Floor" },
   nearby: { kind: "nearby", caption: "Nearby, distance in words" },
-  sessions: { kind: "host", caption: "A host’s page" },
+  sessions: { kind: "host", caption: "A host’s page", shot: "host-profile" },
 };
 
 export default function Features() {
@@ -51,6 +53,11 @@ export default function Features() {
               <li key={i}><b>{["Sign in", "Date of birth", "Face check"][i]}</b><p>{s}</p></li>
             ))}
           </ol>
+          <div className="shot-row">
+            <Shot name="sign-in" />
+            <Shot name="consent" />
+          </div>
+          <ShotNote />
         </div>
       </section>
 
@@ -84,7 +91,7 @@ export default function Features() {
               </div>
               {art ? (
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <Phone kind={art.kind} caption={art.caption} />
+                  {art.shot ? <Shot name={art.shot} caption={art.caption} /> : <Phone kind={art.kind} caption={art.caption} />}
                 </div>
               ) : null}
             </div>
@@ -104,6 +111,11 @@ export default function Features() {
             <div className="card"><h3 className="h3">Sharing</h3><p>Share a post or profile as a link, or show your profile QR code.</p></div>
             <div className="card"><h3 className="h3">Insights</h3><p>Creators and hosts see how their posts do and, for hosts, their bookings and earnings.</p></div>
           </div>
+          <div className="shot-row">
+            <Shot name="settings" />
+            <Shot name="privacy" />
+          </div>
+          <ShotNote />
           <p className="muted small" style={{ marginTop: 22 }}>
             Not in The Club: group chats, live video streaming, group sessions
             and in-person meetings. We have chosen to leave them out.
