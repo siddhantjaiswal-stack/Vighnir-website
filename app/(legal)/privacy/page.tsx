@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
               <p>
                 This policy covers the mobile app <strong>The Club</strong> and
                 this website, <strong>vighnir.com</strong>. It does not cover
-                Vighnir’s other brands, or anything you reach by leaving the app.
+                anything you reach by leaving the app.
               </p>
               <div className="legal-note glass">
                 <span className="mono">What this version describes</span>
@@ -109,6 +109,12 @@ export default function PrivacyPolicy() {
                   on. Every item is listed in <a href="#collect">§3</a>.
                 </li>
                 <li>
+                  <strong>Three things are off unless you turn them on:</strong>{" "}
+                  the personalised feed, usage analytics and crash reports. You
+                  choose at sign-up, and you can change each one later in
+                  Settings (<a href="#collect">§3</a>).
+                </li>
+                <li>
                   <strong>We do not run ads, and we do not sell your data.</strong>{" "}
                   There is no advertising SDK and no advertising identifier in
                   the app.
@@ -134,8 +140,8 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   Your account database is in <strong>India (Mumbai)</strong>.
-                  Some live traffic, and the app’s usage analytics, go outside
-                  India. <a href="#where">§9</a> says exactly what and where.
+                  Some live traffic, and the app’s usage analytics if you turn
+                  them on, go outside India. <a href="#where">§9</a> says exactly what and where.
                 </li>
                 <li>
                   You can delete your account inside the app, ask for a copy of
@@ -369,13 +375,13 @@ export default function PrivacyPolicy() {
                   <dd>
                     For each image you upload, we make a fingerprint (a hash) on
                     our own servers. We send only that fingerprint, never the
-                    image, to the Microsoft PhotoDNA cloud service in the United
-                    States. It tells us whether the fingerprint matches known
-                    child sexual abuse material. If the Microsoft service cannot
-                    be reached, we send the same fingerprint, and nothing else,
-                    to the Arachnid Shield service of the Canadian Centre for
-                    Child Protection instead. We do this to meet our legal duty
-                    to keep that material off The Club.
+                    image, to an industry child-safety hash-matching service in
+                    the United States. It tells us whether the fingerprint
+                    matches known child sexual abuse material. If that service
+                    cannot be reached, we send the same fingerprint, and nothing
+                    else, to a second child-safety hash-matching service run by
+                    a child-protection organisation instead. We do this to meet
+                    our legal duty to keep that material off The Club.
                   </dd>
                 </div>
               </dl>
@@ -630,23 +636,35 @@ export default function PrivacyPolicy() {
 
               <h3>How your feeds are ordered</h3>
               <p>
-                Your Home feed and your Minis are personalised from how you use
-                them. We use what you watch, for how long, and whether you finish
+                <strong>Personalised feed is off unless you turn it on.</strong>{" "}
+                You choose at sign-up, and you can change it later in Settings.
+                Until you turn it on, your Home feed and your Minis show a plain
+                order and nothing is learned from how you use them. If you turn
+                it on, your Home feed and your Minis are personalised from how
+                you use them. We use what you watch, for how long, and whether you finish
                 or skip a Mini. We use what you like, comment on, save or hide,
                 whose profiles you open, and whom you follow. We keep a short
                 memory built from this. In Settings you can turn{" "}
-                <strong>Personalised feed</strong> off, which deletes what was
-                learned and shows a plain order, or choose{" "}
+                <strong>Personalised feed</strong> off again, which deletes what
+                was learned and shows a plain order, or choose{" "}
                 <strong>Reset my feed</strong>.
               </p>
 
               <h3>Usage analytics (PostHog)</h3>
               <dl className="legal-dl">
                 <div>
+                  <dt>Off unless you turn it on</dt>
+                  <dd>
+                    Usage analytics are off unless you turn them on. You choose
+                    at sign-up, and you can change it later in Settings. Until
+                    you turn them on, the app sends nothing to PostHog.
+                  </dd>
+                </div>
+                <div>
                   <dt>What the app sends</dt>
                   <dd>
-                    The app sends product analytics to PostHog Inc. in the
-                    United States. It records which screen was opened, four
+                    If you turn them on, the app sends product analytics to
+                    PostHog Inc. in the United States. It records which screen was opened, four
                     named actions (signing up, creating a post, watching a Mini,
                     booking a session), a few plain words such as the kind of
                     post, your device type, app version and language. It
@@ -707,8 +725,12 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Crash and error reports</dt>
                   <dd>
-                    When the app or our servers hit an error, a report goes first
-                    to our own relay, and from there to Sentry. It identifies you
+                    Crash reports from the app are off unless you turn them on.
+                    You choose at sign-up, and you can change it later in
+                    Settings. If you turn them on, then when the app hits an
+                    error, a report goes first to our own relay, and from there
+                    to Sentry. When our own servers hit an error, a report goes
+                    the same way. It identifies you
                     only by an internal account id, never your phone number,
                     email address, date of birth or location. Personal details
                     are stripped on your phone and again on our relay.
@@ -763,10 +785,11 @@ export default function PrivacyPolicy() {
                   data brokers or list buyers.
                 </li>
                 <li>
-                  <strong>No analytics in the app except PostHog.</strong> What it
-                  collects is in <a href="#collect">§3</a>. The only other
-                  outside services the app reports to are Sentry, for crash
-                  reports, and Expo, for update checks.
+                  <strong>No analytics in the app except PostHog</strong>, and
+                  only if you turn usage analytics on. What it collects is in{" "}
+                  <a href="#collect">§3</a>. The only other outside services the
+                  app reports to are Sentry, for crash reports (also only if you
+                  turn them on), and Expo, for update checks.
                 </li>
                 <li>
                   <strong>We do not record calls</strong> between people in each
@@ -830,7 +853,7 @@ export default function PrivacyPolicy() {
               <p>
                 You can also withdraw the optional parts on their own and keep
                 the account. Delete your contact matches, switch Nearby off,
-                switch Personalised feed off, or ask us to remove your photo, your
+                switch Personalised feed, usage analytics or crash reports off, or ask us to remove your photo, your
                 interests or your location.
               </p>
             </section>
@@ -1021,20 +1044,21 @@ export default function PrivacyPolicy() {
                   </dd>
                 </div>
                 <div>
-                  <dt>Microsoft (United States)</dt>
+                  <dt>Child-safety hash-matching service (United States)</dt>
                   <dd>
-                    Its PhotoDNA cloud service is our main check against known
-                    child sexual abuse material. It receives the fingerprint
-                    (hash) of every image you upload, never the image. See{" "}
-                    <a href="#collect">§3</a>.
+                    An industry child-safety hash-matching service is our main
+                    check against known child sexual abuse material. It receives
+                    the fingerprint (hash) of every image you upload, never the
+                    image. See <a href="#collect">§3</a>.
                   </dd>
                 </div>
                 <div>
-                  <dt>Canadian Centre for Child Protection</dt>
+                  <dt>Backup child-safety hash-matching service</dt>
                   <dd>
-                    Its Arachnid Shield service is our backup for that check. It
-                    receives the fingerprint (hash) of an image only when the
-                    Microsoft service cannot be reached, never the image. See{" "}
+                    A second child-safety hash-matching service, run by a
+                    child-protection organisation, is our backup for that check.
+                    It receives the fingerprint (hash) of an image only when the
+                    first service cannot be reached, never the image. See{" "}
                     <a href="#collect">§3</a>.
                   </dd>
                 </div>
@@ -1150,8 +1174,8 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Known-image check</dt>
                   <dd>
-                    <strong>United States</strong> (Microsoft). The backup
-                    service, Arachnid Shield, is in Canada.
+                    <strong>United States</strong> (the main service). The
+                    backup service is in Canada.
                   </dd>
                 </div>
                 <div>
@@ -1271,7 +1295,8 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Feed memory</dt>
                   <dd>
-                    While your account is active. It is deleted if it is not
+                    Only if you turn Personalised feed on. While your account is
+                    active. It is deleted if it is not
                     used for 180 days, or when you turn Personalised feed off.
                   </dd>
                 </div>
@@ -1339,8 +1364,9 @@ export default function PrivacyPolicy() {
                 <div>
                   <dt>Usage analytics and error reports</dt>
                   <dd>
-                    They carry only an internal account id, with no name, phone,
-                    email or location. Deleting your account does not yet remove
+                    They exist only if you turned usage analytics or crash
+                    reports on. They carry only an internal account id, with no
+                    name, phone, email or location. Deleting your account does not yet remove
                     them automatically at PostHog or Sentry. Once your account is
                     gone the id no longer points to you. If you want them erased
                     too, write to{" "}
@@ -1513,9 +1539,10 @@ export default function PrivacyPolicy() {
                 </p>
                 <p>
                   We acknowledge a grievance <strong>within 24 hours</strong> and
-                  resolve it <strong>within 7 days</strong>. Complaints about
-                  content on The Club have shorter deadlines. Those are set out in
-                  the <Link href="/terms#grievance">Terms of Service</Link>.
+                  resolve it <strong>within 36 hours</strong>. Some complaints
+                  about content on The Club have shorter deadlines. All of them
+                  are set out in the{" "}
+                  <Link href="/terms#grievance">Terms of Service</Link>.
                 </p>
               </div>
               <p>

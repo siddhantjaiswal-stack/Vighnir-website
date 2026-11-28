@@ -91,6 +91,9 @@ export default function About() {
           <h2 className="h2" id="team-title" style={{ marginTop: 12 }}>A small, founder-led team in India.</h2>
           <div className="prose">
             <p>
+              <strong>Shubham Pal</strong> is a Director of {LEGAL.entity}.
+            </p>
+            <p>
               Vighnir is founder-led and based in India. The team designs and
               builds The Club itself: the iPhone and Android app, the backend,
               the video pipeline, the recommendation system and the safety

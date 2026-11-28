@@ -6,35 +6,21 @@
  * India's DPDP Act 2023 and the IT (Intermediary Guidelines) Rules 2021.
  * Keep every statement on them true of the code that actually ships.
  *
- * ── OPEN GAPS (a human must fill these; do not invent values) ───────────────
+ * ── CONTACTS ────────────────────────────────────────────────────────────────
  *
- *  1. NO GRIEVANCE OFFICER IS APPOINTED YET. No person is named on the public
- *     pages (decision D-223, 2026-11-11, restated 2026-11-13): the pages show
- *     `grievanceOfficerLine` below, which says the name is "to be named before
- *     launch", and the role mailboxes `grievance@vighnir.com` and
- *     `privacy@vighnir.com`. No personal name or personal mailbox may appear
- *     on any public page. Rule 3(2)(a) of the IT Rules 2021 requires the
- *     officer's NAME and contact details, and the app stores ask for them at
- *     submission, so this is a launch blocker (tracked in the app repo,
- *     PENDING.md §9.1) and not a permanent state. The production build
- *     deliberately does NOT fail on the placeholder: the site must stay
- *     deployable. When a person is appointed, replace `grievanceOfficerLine`
- *     with their name and role (one edit; both pages follow) and update the
- *     app's GRIEVANCE_OFFICER_CONTACT.
- *     BEFORE DEPLOY: `grievance@` and `privacy@` must exist and reach a human.
+ *  1. Grievance Officer: Shubham Pal, Director of Vighnir (OPC) Private Limited
+ *     (owner ruling 2026-11-28). The IT Rules 2021 (rule 3(2)(a)) ask for the
+ *     officer's name and contact details; both are on every page that carries a
+ *     grievance contact. One edit in `grievanceOfficerLine` updates them all.
  *
- *  2. RESOLVED 2026-08-03: the registered entity is "Vighnir (OPC) Private
- *     Limited" — confirmed from the Apple Developer organisation account
- *     (team JQHHG3FT8G). RESOLVED FULLY 2026-08-03: CIN and registered
- *     office added from the incorporation papers. The Google Play developer
- *     account must be registered under this same name.
+ *  2. One public mailbox: hello@vighnir.com (owner ruling 2026-11-28). There are
+ *     no separate role mailboxes; the constants below all point at it so a
+ *     page never has to choose.
  *
- *  3. RESOLVED 2026-08-03: registered office is 199-197 Civil Lines,
- *     Bareilly - 243001, UP (certificate of incorporation). Gap closed.
- *
- *  4. The privacy and deletion contacts are the role mailbox `privacy@vighnir.com`
- *     (deletion requests go to the same mailbox; there is no `deletion@`). One
- *     edit here updates the pages.
+ *  3. The registered entity is "Vighnir (OPC) Private Limited", confirmed from
+ *     the Apple Developer organisation account (team JQHHG3FT8G). The CIN and
+ *     registered office come from the certificate of incorporation. The Google
+ *     Play developer account must be registered under this same name.
  */
 export const LEGAL = {
   /** Corporate Identification Number, from the MCA master data. */
@@ -45,29 +31,23 @@ export const LEGAL = {
 
   effective: "3 August 2026",
   effectiveIso: "2026-08-03",
-  /** The privacy page alone was revised on this date (rewritten from what the app collects, D-347; 16 Nov: edited and unsent messages kept 180 days, D-432); terms and account deletion keep the date above. */
-  privacyEffective: "16 November 2026",
-  privacyEffectiveIso: "2026-11-16",
+  /** The privacy page alone was revised on this date (rewritten from what the app collects, D-347; 16 Nov: edited and unsent messages kept 180 days, D-432; 28 Nov: one grievance timeline, opt-in feed, analytics and crash reports, no partner names); terms and account deletion keep the date above. */
+  privacyEffective: "28 November 2026",
+  privacyEffectiveIso: "2026-11-28",
   version: "1.0",
   /** The account-deletion page alone was revised on this date (in-app deletion and Sign in with Apple are live); privacy and terms keep their own dates. */
   deletionEffective: "16 November 2026",
   deletionEffectiveIso: "2026-11-16",
   deletionVersion: "1.2",
 
-  /** See gap 4. Role mailboxes only; never a personal address. */
-  privacyEmail: "privacy@vighnir.com",
-  grievanceEmail: "grievance@vighnir.com",
-  deletionEmail: "privacy@vighnir.com",
+  /** The one public company mailbox (see note 2 above). */
+  contactEmail: "hello@vighnir.com",
+  privacyEmail: "hello@vighnir.com",
+  grievanceEmail: "hello@vighnir.com",
+  deletionEmail: "hello@vighnir.com",
 
-  /**
-   * See gap 1. The one neutral line the pages show until a person is appointed.
-   * TODO-OWNER (site revamp 2026-11-28): kept exactly as it was. The owner wants
-   * someone other than himself as Grievance Officer; he names that person (and
-   * confirms grievance@ and privacy@ deliver to a human) before launch. Shown
-   * on /terms §8, /privacy §13, /host-terms, /account-deletion, /support and
-   * /grievance. Never write a name here without the owner's ruling.
-   */
-  grievanceOfficerLine: "Grievance Officer: to be named before launch",
+  /** The Grievance Officer (note 1 above). Shown on every page with a grievance contact. */
+  grievanceOfficerLine: "Grievance Officer: Shubham Pal, Director, Vighnir (OPC) Private Limited",
 
   /** The registered office, from the certificate of incorporation (docs dropped 2026-08-03). */
   postalAddress: "Vighnir (OPC) Private Limited, 199-197 Civil Lines, Bareilly - 243001, Uttar Pradesh, India",

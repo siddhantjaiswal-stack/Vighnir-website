@@ -38,6 +38,7 @@ const COLS = [
       ["/privacy", "Privacy Policy"],
       ["/terms", "Terms of Service"],
       ["/community-rules", "Community rules"],
+      ["/child-safety", "Child safety standards"],
       ["/refund-policy", "Refund and cancellation"],
       ["/how-ranking-works", "How ranking works"],
       ["/account-deletion", "Delete your account"],

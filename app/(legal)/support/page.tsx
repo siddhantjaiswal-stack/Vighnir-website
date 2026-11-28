@@ -76,6 +76,7 @@ export default function Support() {
                 <Link href="/privacy">Privacy Policy</Link> ·{" "}
                 <Link href="/terms">Terms of Service</Link> ·{" "}
                 <Link href="/community-rules">Community rules</Link> ·{" "}
+                <Link href="/child-safety">Child safety standards</Link> ·{" "}
                 <Link href="/refund-policy">Refund and cancellation</Link> ·{" "}
                 <Link href="/how-ranking-works">How ranking works</Link>
               </p>

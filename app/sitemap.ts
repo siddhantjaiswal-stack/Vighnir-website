@@ -24,6 +24,7 @@ const PAGES: Array<[path: string, lastModified: Date, priority: number, changeFr
   ["/privacy", new Date(LEGAL.privacyEffectiveIso), 0.5, "yearly"],
   ["/terms", REVAMP, 0.5, "yearly"],
   ["/community-rules", new Date(LEGAL.effectiveIso), 0.5, "yearly"],
+  ["/child-safety", REVAMP, 0.5, "yearly"],
   ["/refund-policy", REVAMP, 0.5, "yearly"],
   ["/how-ranking-works", new Date("2026-11-06"), 0.5, "yearly"],
   ["/account-deletion", new Date(LEGAL.deletionEffectiveIso), 0.5, "yearly"],

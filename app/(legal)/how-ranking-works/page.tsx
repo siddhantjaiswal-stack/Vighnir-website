@@ -159,7 +159,7 @@ export default function HowRankingWorks() {
               <p>
                 If you disagree with a decision, or we have not answered in
                 time, you can write to our Grievance Officer. We acknowledge a
-                complaint within 24 hours and resolve it within 7 days. The
+                complaint within 24 hours and resolve it within 36 hours. The
                 details are under{" "}
                 <Link href="/terms#grievance">Reporting &amp; grievances</Link>{" "}
                 in our Terms.

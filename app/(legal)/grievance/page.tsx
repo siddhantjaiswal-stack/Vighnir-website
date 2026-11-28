@@ -56,13 +56,6 @@ export default function Grievance() {
                 Guidelines and Digital Media Ethics Code) Rules, 2021 require{" "}
                 {LEGAL.entity} to publish.
               </p>
-              {/* TODO-OWNER: the Grievance Officer block below is kept exactly as it
-                  stands on the live Terms §8 and Privacy §13 (LEGAL.grievanceOfficerLine,
-                  "to be named before launch"). The owner wants someone other than
-                  himself as the officer; the owner decides who, and whether the
-                  grievance@ mailbox is live (it is unverified; the app currently
-                  sends grievances to hello@). Do not name anyone here without the
-                  owner's ruling. One edit in lib/legal.ts updates every page. */}
               <div className="legal-note glass">
                 <span className="mono">Grievance contact</span>
                 <p>{LEGAL.grievanceOfficerLine}</p>
